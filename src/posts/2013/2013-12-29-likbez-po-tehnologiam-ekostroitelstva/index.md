@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ликбез по технологиям экостроительства"
 date: "2013-12-29"
 categories: 
@@ -9,6 +10,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "soloma118.jpg"
+permalink: "likbez-po-tehnologiam-ekostroitelstva"
 ---
 
 Учитывая сказанное в [предыдущих](http://svobodaiznutri.ru/?p=36) [постах](http://svobodaiznutri.ru/?p=35), ограничения перед нами стояли следующие:

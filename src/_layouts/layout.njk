@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Meta -->
   <meta name="description" content="{{metadata.description}}">
   <meta name="generator" content="11ty">
 
-  <!-- Icons -->
   <link rel="manifest" href="{{'/manifest.json' | url}}">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -23,12 +21,14 @@
 
   <title>{{title or metadata.title}}</title>
 
-  <link rel="stylesheet" href="{{'/site.css' | url}}">
+  <link rel="stylesheet" href="{{'/reset.css' | url}}">
+  <link rel="stylesheet" href="{{'/style.css' | url}}">
+  <link rel="stylesheet" href="{{'/media.css' | url}}">
 
   {% include 'seo.njk' %}
 
-  <meta name="yandex-verification" content="54f2d7ee5a4d2b80" /> <? // yandex webmaster ?>
-  <meta name='yandex-verification' content='781b402150e6d49b' /> <? // yandex metrika ?>
+  <meta name="yandex-verification" content="54f2d7ee5a4d2b80" /> {# yandex webmaster #}
+  <meta name='yandex-verification' content='781b402150e6d49b' /> {# yandex metrika #}
 </head>
 
 <body>

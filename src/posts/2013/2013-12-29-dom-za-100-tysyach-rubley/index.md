@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Эпиграф к стройке: дом за 100 т.р."
 date: "2013-12-29"
 categories: 
@@ -8,6 +9,9 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "ekodom.jpg"
+# slug: "dom-za-100-tysyach-rubley/"
+# permalink: "./{{ slug }}/index.html"
+# permalink: "dom-za-100-tysyach-rubley"
 ---
 
 Кто-то ноет про цены на жильё, кто-то ругает чиновников, многих пугает ухудшение экологии, практически все свыклись с пробками, как с необходимым злом... Какие несчатные люди.
