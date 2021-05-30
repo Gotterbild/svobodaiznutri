@@ -20,7 +20,7 @@
     "11ty"
   ],
   "author": "Pavel Dolgov",
-  "license": "Unlicense",
+  "license": "Content and source code are separately licensed. The content is licensed under the CC BY 4.0 license. The source code for page structure, CSS and JS code are licensed under the MIT.",
   "homepage": "https://svobodaiznutri.ru",
   "bugs": {
     "url": "https://github.com/Gotterbild/svobodaiznutri/issues"
