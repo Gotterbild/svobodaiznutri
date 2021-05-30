@@ -1,13 +1,7 @@
 const fs = require('fs')
 const htmlmin = require('html-minifier')
-const pageAssetsPlugin = require('eleventy-plugin-page-assets');
+const pageAssetsPlugin = require('eleventy-plugin-page-assets')
 
-module.exports = function(eleventyConfig) {
-    eleventyConfig.addPlugin(pageAssetsPlugin, {
-        mode: 'parse',
-        postsMatching: 'src/posts/*/*.md',
-    });
-};
 module.exports = function(eleventyConfig) {
 
   if (process.env.ELEVENTY_PRODUCTION) {
@@ -22,7 +16,7 @@ module.exports = function(eleventyConfig) {
   //   console.log('!!!!!!!!! data !!!!!!!!!!!!!', data)
   //   return data
   // }})
-  // eleventyConfig.addPassthroughCopy({ '**/images': 'images' });
+  // eleventyConfig.addPassthroughCopy({ '**/images': 'images' })
   // eleventyConfig.setTemplateFormats([
   //   'md',
   //   'jpg', 'jpeg', 'png', 'svg',
@@ -31,10 +25,11 @@ module.exports = function(eleventyConfig) {
   // ])
   eleventyConfig.addPlugin(pageAssetsPlugin, {
     mode: 'directory',
-    postsMatching: 'src/*/*/*/*.md',
+    postsMatching: '*.md',
     assetsMatching: '*.pdf|*.doc|*.png|*.jpeg|*.jpg|*.gif',
     // hashAssets: false,
   })
+
 
   // Watch targets
   eleventyConfig.addWatchTarget('./src/styles/')

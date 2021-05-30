@@ -9,9 +9,12 @@ tags:
   - "likbez"
   - "strojka"
   - "filosofiya"
-coverImage: "soloma118.jpg"
-permalink: "likbez-po-tehnologiam-ekostroitelstva"
+image: "soloma118.jpg"
+permalink: "likbez-po-tehnologiam-ekostroitelstva/"
 ---
+<!-- <img src="{{images/soloma118.jpg | url}}"/> -->
+ <!-- [![](images/soloma118.jpg "Соломенные блоки")](images/soloma118.jpg "Соломенные блоки") -->
+<!-- images/soloma118.jpg -->
 
 Учитывая сказанное в [предыдущих](http://svobodaiznutri.ru/?p=36) [постах](http://svobodaiznutri.ru/?p=35), ограничения перед нами стояли следующие:
 
