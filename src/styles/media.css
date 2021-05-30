@@ -1,0 +1,99 @@
+@media ( min-width: 480px ) {
+
+.grid { width: 480px; }
+#header { margin-bottom: 2rem; }
+#header .menu { display: table-cell; }
+#header .burgerwrap { display: none }
+.top-widget {
+	display: block;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.page .blog article .thumb {
+   margin-left: 0;
+   margin-right: 0;
+	height: 70vh;
+}
+.page .blog article { margin: 1rem 0 2rem; }
+.page .blog article .thumb header { padding: 1rem; }
+.related_posts_by_taxonomy	dd { font-size: 1em; padding: 0 1em; }
+
+}
+
+@media ( min-width: 768px ) {
+
+h1, h2 { font-size: 2.5em; }
+input, textarea {	width: 15em; }
+.grid {
+	width: 768px;
+	padding-right: 2rem;
+	padding-left: 2rem;
+}
+.left {float: left}
+.right {float: right;}
+#header #logobox .logoname { display: table-cell; }
+.top-widget .widget_wysija_cont { padding: 2rem;  }
+.widget_wysija .left,
+.widget_wysija .right  { float: none; }
+.widget_wysija h2 { font-size: 2.5em; }
+.widget_wysija input {
+	display: inline-block;
+	width: calc(50% - 0.25rem);
+	margin-bottom: 0;
+}
+.page .blog article .text { padding: 1em 2rem; }
+.page .blog article .text .readmore,
+.page .blog article .text .prev { margin-left: -2rem; }
+.page .blog article .text .next { margin-right: -2rem; }
+.page .blog article .text .prev,
+.page .blog article .text .next { width: 52.5%; }
+blockquote { margin: 2em -2rem; }
+.related_posts_by_taxonomy .main { padding: 1rem !important;}
+.comment-respond input[type='submit'] { margin-right: 1.5rem; margin-top: 1rem; }
+#footer { line-height: 1; }
+#footer .left { padding: 0.5em 0; }
+
+}
+
+
+
+@media ( min-width: 1024px ) {
+
+.grid { width: 100%; }
+#header .menu {font-size: 1.25rem;}
+.top-widget.widget_wysija, .top-widget { width: 100%; }
+.widget_wysija .text { line-height: 1.25em; padding-bottom: 0; }
+.widget_wysija .left {float: left; max-width: 73% }
+.widget_wysija .right {float: right;}
+.widget_wysija input {
+	display: block;
+	width: 100%;
+	margin-bottom: 1em;
+}
+#content { width: calc(100% - 320px - 2rem);  float: left; }
+#sidebar { width: 320px; float: right;}
+.page .blog article { margin: 0 0 2rem; }
+
+}
+
+@media ( min-width: 1366px ) {
+
+.grid { width: 1195px; }
+
+}
+
+
+
+@media ( min-width: 1600px ) {
+
+.grid { width: 1195px; }
+
+}
+
+
+@media ( min-width: 1920px ) {
+
+.grid { width: 1195px;; }
+
+}
