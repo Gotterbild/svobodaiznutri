@@ -1,7 +1,7 @@
 {
-  "name": "Свобода Изнутри",
+  "name": "svobodaiznutri",
   "version": "1.0.0",
-  "description": "Static blog about eco-building",
+  "description": "Blog about eco-building built with 11ty",
   "scripts": {
     "start": "run-p start:*",
     "start:eleventy": "eleventy --serve",
