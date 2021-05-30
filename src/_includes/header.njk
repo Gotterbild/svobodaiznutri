@@ -1,0 +1,48 @@
+<header id="header">
+	<div class="grid">
+		<div class="table">
+			<div id="logobox">
+				<a class="logo" href="/"><img src="<?=get_template_directory_uri()?>/images/logos/svo_baloon_white.svg" alt="<? bloginfo('name'); ?> | <? bloginfo('description'); ?>"></a>
+				<a class="logoname" href="/"><img src="<?=get_template_directory_uri()?>/images/logos/logoname.png" alt="<? bloginfo('name'); ?> | <? bloginfo('description'); ?>"></a>
+			</div>
+			<div class="menu">
+				<? wp_nav_menu(array(
+					'theme_location' 	=> 'top',
+					'container' 		=> '',
+					'menu_class' 		=> false,
+					'items_wrap' 		=> '<nav>%3$s</nav>',
+					'before'          => '',
+					'after'           => '',
+					'link_before'     => '',
+					'link_after'      => '',
+					'depth' 				=> 0,
+					'show_home' 		=> 0,
+					'walker'          => new Svoboda_Walker
+					));
+				?>
+			</div>
+			<div class="burgerwrap">
+				<a class="burger" href="#"><span></span><span></span><span></span></a>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+	<div class="menu-mobile">
+		<div class="menuwrap">
+			<? wp_nav_menu(array(
+				'theme_location' 	=> 'top',
+				'container' 		=> '',
+				'menu_class' 		=> false,
+				'items_wrap' 		=> '<nav>%3$s</nav>',
+				'before'          => '',
+				'after'           => '',
+				'link_before'     => '',
+				'link_after'      => '',
+				'depth' 				=> 0,
+				'show_home' 		=> 0,
+				'walker'          => new Svoboda_Walker
+				));
+			?>
+		</div>
+	</div>
+</header>
