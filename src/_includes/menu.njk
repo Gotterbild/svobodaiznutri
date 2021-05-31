@@ -1,0 +1,9 @@
+<nav>
+	{% for item in menu %}
+		<a
+			class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"
+			title="{{item.i18n | i18n}}"
+			href="{{item.url | url}}"
+		>{{item.i18n | i18n}}</a>
+	{% endfor %}
+</nav>

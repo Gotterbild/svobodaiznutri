@@ -8,7 +8,6 @@ categories:
 tags: 
   - "otoplenie"
   - "planirovanie"
-  - "s"
   - "strojka"
   - "fundament"
 coverImage: "2014-05-21-16-37-46.jpg"

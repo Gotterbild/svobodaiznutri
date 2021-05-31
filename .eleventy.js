@@ -14,7 +14,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({ callbacks: { ready: browserSyncReady }})
   }
 
-  // Passthrough
   eleventyConfig.addPassthroughCopy({ 'src/static': '.' })
   eleventyConfig.addPlugin(pageAssetsPlugin, {
     mode: 'directory',
@@ -23,6 +22,10 @@ module.exports = function(eleventyConfig) {
     recursive: true,
     // hashAssets: false,
   })
+  // eleventyConfig.setTemplateFormats([
+  //   // "md",
+  //   "css",
+  // ]);
 
   // Watch targets
   eleventyConfig.addWatchTarget('./src/styles/')

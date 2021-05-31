@@ -5,9 +5,9 @@ date: "2018-10-23"
 categories: 
   - "eko-stroitelstvo"
 tags: 
-  - "новости"
-  - "опыт"
-  - "стройка"
+  - "novosti"
+  - "opyt"
+  - "strojka"
 coverImage: "WhatsApp-Image-2018-10-22-at-09.39.59-2.jpeg"
 permalink: "nadyozhny-li-steny-doma-iz-meshkov/"
 ---

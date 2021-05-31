@@ -2,10 +2,12 @@
 layout: layout
 ---
 
+{% include 'header.njk' %}
+
 <main id="blog" class="page">
 	<div class="grid">
 
-		{# {%dynamic_sidebar('top-sidebar');%} #}
+	{# {%dynamic_sidebar('top-sidebar');%} #}
 
 		<section id="content" class="blog post">
 
@@ -94,3 +96,4 @@ layout: layout
 	</div><!-- grid -->
 </main>
 
+{% include 'footer.njk' %}
