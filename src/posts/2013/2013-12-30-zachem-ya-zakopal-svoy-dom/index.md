@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Зачем я закопал свой дом?"
 date: "2013-12-30"
 categories: 
@@ -12,7 +13,7 @@ coverImage: "0000357225.jpg"
 permalink: "zachem-ya-zakopal-svoy-dom/"
 ---
 
-Про причины выбора круглой формы дома я рассказывал в [прошлый раз](http://svobodaiznutri.ru/?p=33), сегодня разберёмся с вкопанностью.
+Про причины выбора круглой формы дома я рассказывал в [прошлый раз](/?p=33), сегодня разберёмся с вкопанностью.
 
 **Дом будет вкопан в холм и обвалован**
 
@@ -80,9 +81,9 @@ _«А как же влажность?»_
 
 Напоследок несколько фотографий подземных домов и домов с зелёной кровлей:
 
-[![Типа, дом хоббита](images/1023680_.jpg "Типа, дом хоббита")](http://svobodaiznutri.ru/wp-content/uploads/2013/12/1023680_.jpg)[![Подземный дом в Африке](images/FRANK-LLOYD-WRIGHT-FALLINGW.jpg "Подземный дом в Африке")](http://svobodaiznutri.ru/wp-content/uploads/2013/12/FRANK-LLOYD-WRIGHT-FALLINGW.jpg)[![Подземный дом Гарри Невилла, футболиста из Манчестер Юнайтед](images/13391_3_bolton_ecohouse3big.jpg "Подземный дом Гарри Невилла, футболиста из Манчестер Юнайтед")](http://svobodaiznutri.ru/wp-content/uploads/2013/12/13391_3_bolton_ecohouse3big.jpg)[![Подземный отель Питера Ветча](images/2011-10-03_33_1.jpg "Подземный отель Питера Ветча")](http://svobodaiznutri.ru/wp-content/uploads/2013/12/2011-10-03_33_1.jpg)[![Обычный дом, но с зелёной кровлей](images/americangreenroof.jpg "Обычный дом, но с зелёной кровлей")](http://svobodaiznutri.ru/wp-content/uploads/2013/12/americangreenroof.jpg)[!["Лисья нора". Проект обвалованного дома хрен знает каких годов (70-80)](images/dom_lnora1_3.gif ""Лисья нора". Проект обвалованного дома хрен знает каких годов (70-80)")](http://svobodaiznutri.ru/wp-content/uploads/2013/12/dom_lnora1_3.gif)
+[![Типа, дом хоббита](images/1023680_.jpg "Типа, дом хоббита")](/wp-content/uploads/2013/12/1023680_.jpg)[![Подземный дом в Африке](images/FRANK-LLOYD-WRIGHT-FALLINGW.jpg "Подземный дом в Африке")](/wp-content/uploads/2013/12/FRANK-LLOYD-WRIGHT-FALLINGW.jpg)[![Подземный дом Гарри Невилла, футболиста из Манчестер Юнайтед](images/13391_3_bolton_ecohouse3big.jpg "Подземный дом Гарри Невилла, футболиста из Манчестер Юнайтед")](/wp-content/uploads/2013/12/13391_3_bolton_ecohouse3big.jpg)[![Подземный отель Питера Ветча](images/2011-10-03_33_1.jpg "Подземный отель Питера Ветча")](/wp-content/uploads/2013/12/2011-10-03_33_1.jpg)[![Обычный дом, но с зелёной кровлей](images/americangreenroof.jpg "Обычный дом, но с зелёной кровлей")](/wp-content/uploads/2013/12/americangreenroof.jpg)[!["Лисья нора". Проект обвалованного дома хрен знает каких годов (70-80)](images/dom_lnora1_3.gif ""Лисья нора". Проект обвалованного дома хрен знает каких годов (70-80)")](/wp-content/uploads/2013/12/dom_lnora1_3.gif)
 
-Надеюсь, было интересно. В следующий раз расскажу [про ориентацию по Солнцу](http://svobodaiznutri.ru/?p=31) и почему это так важно.
+Надеюсь, было интересно. В следующий раз расскажу [про ориентацию по Солнцу](/?p=31) и почему это так важно.
 
 Комментируем, не стесняемся!
 

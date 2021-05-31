@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Надёжны ли стены дома из мешков?"
 date: "2018-10-23"
 categories: 

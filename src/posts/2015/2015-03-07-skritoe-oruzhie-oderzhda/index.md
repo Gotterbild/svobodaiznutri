@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Скрытое оружие: Одежда"
 date: "2015-03-07"
 categories: 

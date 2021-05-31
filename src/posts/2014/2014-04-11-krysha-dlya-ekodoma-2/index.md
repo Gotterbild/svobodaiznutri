@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Крыша для экодома. Часть вторая."
 date: "2014-04-11"
 categories: 
@@ -51,4 +52,4 @@ permalink: "krysha-dlya-ekodoma-2/"
 
 [![](images/IMG_20131011_122559.jpg "...И пошёл снег...")](http://2.bp.blogspot.com/-KBAGAPunirc/U0eQhuyjk0I/AAAAAAAAAfU/SirfRpLJfRA/s1600/IMG_20131011_122559.jpg "...И пошёл снег...")
 
-[Продолжение следует...](http://svobodaiznutri.ru/krysha-dlya-ekodoma-3/)
+[Продолжение следует...](/krysha-dlya-ekodoma-3/)

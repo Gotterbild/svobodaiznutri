@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Новый адрес сайта"
 date: "2014-10-03"
 categories: 

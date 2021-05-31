@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "О нас"
 date: "2014-09-19"
 ---

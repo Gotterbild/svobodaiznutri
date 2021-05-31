@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Ошибки начинающих экостроителей. Часть 1."
 date: "2015-12-20"
 categories: 
@@ -13,7 +14,7 @@ coverImage: "grabli.jpg"
 permalink: "oshibki-nachinayuschih-ekostroitelei-1/"
 ---
 
-Как и [обещал](http://svobodaiznutri.ru/zdravstvuite-dorogie-chitateli/), эта статья — про ошибки, которые допускают многие начинающие экостроители. Ошибки, которых не избежали и мы.
+Как и [обещал](/zdravstvuite-dorogie-chitateli/), эта статья — про ошибки, которые допускают многие начинающие экостроители. Ошибки, которых не избежали и мы.
 
 Если вы внимательно прочитаете и осознаете написанное — вы существенно облегчите себе жизнь. Вчитайтесь: _облегчите себе жизнь._ Имею ввиду, что сможете сэкономить, скажем, год жизни. Не заниматься этот год расхлёбыванием собственных ошибок, а радоваться жизни, занимаясь действительно нужными и полезными вещами.
 
@@ -93,10 +94,10 @@ permalink: "oshibki-nachinayuschih-ekostroitelei-1/"
 
 Исходя из вышесказанного отличной идеей будет протестировать выбранную технологию строительства на очень маленьком объекте — бытовке. Внутреннего размера 2х3 метра будет достаточно. Во-первых, вы приобретёте самое ценное — опыт. Во-вторых, поймёте как оптимизировать будущую стройку. В-третьих, в процессе создадите требуемую инфраструктуру. В-четвёртых, обеспечите себе комфорт во время стройки дома.
 
-На этом пока остановлюсь. Осталось ещё масса важных факторов, о которых нужно сказать, но об этом в [следующий раз](http://svobodaiznutri.ru/oshibki-nachinayuschih-ekostroitelei-2/).
+На этом пока остановлюсь. Осталось ещё масса важных факторов, о которых нужно сказать, но об этом в [следующий раз](/oshibki-nachinayuschih-ekostroitelei-2/).
 
 Напоследок несколько идей простеньких бытовок и обещанное видео про домик Адвоката Егорова.
 
-[![tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka](images/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka-156x150.jpg)](http://svobodaiznutri.ru/wp-content/uploads/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka.jpg)[![37](images/37-200x129.jpg)](http://svobodaiznutri.ru/wp-content/uploads/37.jpg)[![28](images/28-200x113.jpg)](http://svobodaiznutri.ru/wp-content/uploads/28.jpg)[![0_hozblok-1](images/0_hozblok-1-200x150.jpg)](http://svobodaiznutri.ru/wp-content/uploads/0_hozblok-1.jpg)
+[![tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka](images/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka-156x150.jpg)](/wp-content/uploads/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka.jpg)[![37](images/37-200x129.jpg)](/wp-content/uploads/37.jpg)[![28](images/28-200x113.jpg)](/wp-content/uploads/28.jpg)[![0_hozblok-1](images/0_hozblok-1-200x150.jpg)](/wp-content/uploads/0_hozblok-1.jpg)
 
 <iframe src="https://www.youtube.com/embed/D2a6mqYubZ4" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>

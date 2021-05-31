@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Городские истории: «Три холма»"
 date: "2014-11-14"
 categories: 

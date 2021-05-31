@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Граница там, где крестьянин пашет"
 date: "2014-11-27"
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Строим дом из мешков: видео!"
 date: "2014-05-02"
 categories: 

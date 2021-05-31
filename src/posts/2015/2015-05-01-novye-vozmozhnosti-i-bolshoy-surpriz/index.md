@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Новые возможности и большой сюрприз!"
 date: "2015-05-01"
 categories: 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Тяга нашей печки!"
 date: "2014-10-03"
 categories: 

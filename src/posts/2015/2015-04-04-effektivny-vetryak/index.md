@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Эффективный ветряк"
 date: "2015-04-04"
 categories: 

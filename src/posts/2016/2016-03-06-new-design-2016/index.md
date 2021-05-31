@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Новый дизайн!"
 date: "2016-03-06"
 categories: 

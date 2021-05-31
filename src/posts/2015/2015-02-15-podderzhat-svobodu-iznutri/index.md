@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Поддержать «Свободу Изнутри»"
 date: "2015-02-15"
 categories: 

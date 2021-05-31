@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Новый дизайн блога"
 date: "2014-07-23"
 categories: 

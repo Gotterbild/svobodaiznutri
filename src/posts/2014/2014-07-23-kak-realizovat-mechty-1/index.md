@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Как реализовывать мечты. Часть 1"
 date: "2014-07-23"
 categories: 

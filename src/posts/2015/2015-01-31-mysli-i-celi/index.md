@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Мысли и цели"
 date: "2015-01-31"
 categories: 
