@@ -11,8 +11,10 @@ layout: layout
 
 			<article id="post">
 
-				{# <div class="thumb" style="background-image: url('{{metadata.website_url+'/'+permalink+'images/'+coverImage | url}}');"> #}
-				<div class="thumb" style="background-image: url('{{'images/'+coverImage | url}}');">
+
+				<div class="thumb" style="background-image:
+					url({% if coverImage %}'{{'images/'+coverImage | url}}'{% else %}'{{'/images/default.png' | url}}'{% endif %});">
+
 
 					<header>
 						<h1>{{title}}</h1>
@@ -26,6 +28,7 @@ layout: layout
 							{% endif %}
 						</div>
 					</header>
+
 				</div>
 
 
