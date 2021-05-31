@@ -3,4 +3,5 @@ layout: posts
 pagination:
   data: collections.all
   size: 10
+permalink: "{%if pagination.pageNumber > 0 %}/page/{{pagination.pageNumber + 1}}{% endif %}/index.html"
 ---

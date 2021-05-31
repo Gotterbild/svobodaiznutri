@@ -54,6 +54,8 @@ module.exports = function(eleventyConfig) {
     const readmore = '<!-- READMORE -->'
     const regex = new RegExp(readmore)
 
+    // console.log('!!!content!!!', content)
+
     if (content.match(regex))
       return content.split(readmore)[0]
 
