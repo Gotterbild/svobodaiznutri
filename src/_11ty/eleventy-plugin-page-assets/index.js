@@ -16,7 +16,6 @@ const pluginOptions = {
   mode: "parse", // directory|parse
   postsMatching: "*.md",
   assetsMatching: "*.png|*.jpg|*.gif",
-  
   recursive: false, // only mode:directory
 
   hashAssets: true, // only mode:parse
