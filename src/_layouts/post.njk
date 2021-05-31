@@ -15,7 +15,7 @@ layout: layout
 
 
 				<div class="thumb" style="background-image:
-					url({% if coverImage %}'{{'images/'+coverImage | url}}'{% else %}'{{'/images/default.png' | url}}'{% endif %});">
+					url({% if coverImage %}'{{'images/'+coverImage | url}}'{% else %}'{{'/images/default.png' | url}}'{% endif %})">
 
 					<header>
 						<h1>{{title}}</h1>
@@ -58,7 +58,7 @@ layout: layout
 					{% endif %}
 
 					{% set nextPost = collections.all | getNextCollectionItem(page) %}
-					{% if nextPost %}
+					{% if nextPost.title %}
 						<a href="{{nextPost.url}}" class="next">
 							<div>Следующая статья</div>
 							<span>«{{nextPost.data.title}}»</span>

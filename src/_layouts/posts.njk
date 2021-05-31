@@ -16,7 +16,7 @@ layout: layout
 				{% if post.data.title %}
 				  <article>
 				    <div class="thumb" style="background-image:
-				      url('/{{post.data.permalink}}images/{{post.data.coverImage}}');">
+				      url('{% if post.data.coverImage %}/{{post.data.permalink}}images/{{post.data.coverImage}}{% else %}{{'/images/default.png' | url}}{% endif %}')">
 				      <a href="/{{post.data.permalink}}#post" class="link"></a>
 				      <header>
 				        <h2><a href="/{{post.data.permalink}}#post">{{post.data.title}}</a></h2>
@@ -24,7 +24,7 @@ layout: layout
 				          <span class="date">{{post.data.date | date}}</span>
 				          <span class="divider"></span>
 									{% for tag in post.data.tags -%}
-				          	<a class="tag" href='{{tag | tagLink}}'>{{tag | i18n}}</a>{% if loop.index !== tags.length %},{% endif %}
+				          	<a class="tag" href='{{tag | tagLink}}'>{{tag | i18n}}</a>{% if loop.index !== post.data.tags.length %},{% endif %}
 									{% endfor %}
 				          </div>
 				      </header>

@@ -5,6 +5,7 @@ Based on ![Windty](https://github.com/distantcam/windty), but heavily reworked.
 
 TODO:
 
+- Add <!-- READMORE --> tags to all articles
 - Мобильное меню (JS)
 - Страницы тегов
 - Страницы категорий
