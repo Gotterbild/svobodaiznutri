@@ -439,6 +439,7 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 			width: 100px;
 			height: 100px;
 			float: left;
+			object-fit: cover;
 		}
 		.page .sidebar article .wpp-post-title {
 			display: block;
