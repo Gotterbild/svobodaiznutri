@@ -8,7 +8,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "3Techs.jpg"
-permalink: "/"
+permalink: "iz-chego-stroit-steny-ekodoma/"
 ---
 
 Итак, мы [сделали фундамент](http://svobodaiznutri.ru/?p=20) [нашего экодома](http://svobodaiznutri.ru/?p=36), и пришла пора возводить стены. Помните, в [ликбезе по экотехнологиям](http://svobodaiznutri.ru/?p=34) я упоминал, что мы никак не могли выбрать из чего же строить наш дом? Так вот, мы не могли определиться до самого момента возведения стен.

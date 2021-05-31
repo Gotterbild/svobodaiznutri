@@ -8,7 +8,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "Superadobe.jpg"
-permalink: "/"
+permalink: "iz-chego-stroit-steny-ekodoma-2-supersaman/"
 ---
 
 «Из чего строить стены экодома?» — задавал я вопрос в [прошлой статье](http://svobodaiznutri.ru/iz-chego-stroit-steny-ekodoma/ "Из чего строить стены экодома?"). Какая из [технологий экостроительства](http://svobodaiznutri.ru/?p=34) подошла нам? Думаю, все читатели с нетерпением ждали ответа на этот вопрос.

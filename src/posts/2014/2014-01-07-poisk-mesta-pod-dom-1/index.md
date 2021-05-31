@@ -8,7 +8,7 @@ tags:
   - "budni"
   - "strojka"
 coverImage: "D0-9A-D0-BE-D0-BC-D0-BF-D0-B0-D1-81.jpg"
-permalink: "/"
+permalink: "poisk-mesta-pod-dom-1/"
 ---
 
 Почти всё из теории, о чём я писал в [предыдущих постах](http://svobodaiznutri.ru/?p=36), было у меня в голове ко времени начала стройки.

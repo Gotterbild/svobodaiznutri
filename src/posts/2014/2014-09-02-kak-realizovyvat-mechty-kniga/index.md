@@ -7,7 +7,7 @@ categories:
 tags: 
   - "spisok-literatury"
 coverImage: "Kniga_logo.jpg"
-permalink: "/"
+permalink: "kak-realizovyvat-mechty-kniga/"
 ---
 
 В статье [«Как реализовать мечты. Часть 1»](http://svobodaiznutri.ru/kak-realizovat-mechty-1/ "Как реализовывать мечты. Часть 1") я задал себе несколько вопросов. Но они оказались настолько сложными, что ответы на них превысили размеры нескольких статей.

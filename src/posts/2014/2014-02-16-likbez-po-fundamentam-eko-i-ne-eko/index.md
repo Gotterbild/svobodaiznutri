@@ -10,7 +10,7 @@ tags:
   - "strojka"
   - "fundament"
 coverImage: "gravitazija-kamni-18.jpg"
-permalink: "/"
+permalink: "likbez-po-fundamentam-eko-i-ne-eko/"
 ---
 
 [Изучили грунты](http://svobodaiznutri.ru/?p=18), [покритиковали технологию](http://svobodaiznutri.ru/?p=17), теперь пора, наконец, и к конструкциям фундаментов перейти. Если вы не прочитали статьи про грунты и критику, рекоммендую сначала прочесть их. В них подробно раскрывается то, что важно знать читая эту статью.

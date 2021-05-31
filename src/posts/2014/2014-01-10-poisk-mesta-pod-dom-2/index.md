@@ -7,7 +7,7 @@ tags:
   - "budni"
   - "strojka"
 coverImage: "desktopwallpapers.org_.ua-8143.jpg"
-permalink: "/"
+permalink: "poisk-mesta-pod-dom-2/"
 ---
 
 Если помните, [закончили](http://svobodaiznutri.ru/?p=25) мы на том, что поставили палатку и выкосили поляну под дом и тропинки. И без ответа был лишь вопрос о доставке стройматериала.

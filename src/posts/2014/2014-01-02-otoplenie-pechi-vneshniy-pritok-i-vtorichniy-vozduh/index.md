@@ -6,7 +6,7 @@ categories:
 tags: 
   - "otoplenie"
 coverImage: "Palamisprosessi2006.jpg"
-permalink: "/"
+permalink: "otoplenie-pechi-vneshniy-pritok-i-vtorichniy-vozduh/"
 ---
 
 Честно говоря, писать теорию уже порядком поднадоело. Хочется уже скорее перейти к рассказу непосредственно про наш дом. Ибо мил сердцу. Чего уж говорить — НАШ!

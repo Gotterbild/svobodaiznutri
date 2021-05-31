@@ -6,7 +6,7 @@ categories:
 tags: 
   - "novosti"
 coverImage: "RF_style_2.jpg"
-permalink: "/"
+permalink: "novyj-adres-sajta/"
 ---
 
 Отличные новости!

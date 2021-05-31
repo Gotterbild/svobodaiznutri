@@ -9,7 +9,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "Domik.jpg"
-permalink: "/"
+permalink: "o-prostranstve-doma-ili-nashe-malenkoe-sumashestvie/"
 ---
 
 Пространство и наше восприятие этого пространства — две существенно разные вещи. Мы привыкли видеть мир определённым образом, но можно смотреть на одно, а видеть совершенно другое.

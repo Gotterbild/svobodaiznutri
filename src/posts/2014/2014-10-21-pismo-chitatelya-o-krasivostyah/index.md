@@ -9,7 +9,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "Letter.jpg"
-permalink: "/"
+permalink: "pismo-chitatelya-o-krasivostyah/"
 ---
 
 Некоторое время назад я получил письмо, которое привело и меня, и Катю в восторг.

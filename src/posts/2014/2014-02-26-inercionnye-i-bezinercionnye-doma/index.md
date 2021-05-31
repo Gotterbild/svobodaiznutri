@@ -9,7 +9,7 @@ tags:
   - "otoplenie"
   - "filosofiya"
 coverImage: "inertia.jpg"
-permalink: "/"
+permalink: "inercionnye-i-bezinercionnye-doma/"
 ---
 
 Я уже пару раз [упоминал](http://svobodaiznutri.ru/?p=33) про инерционность. Чтобы такие упоминания не были белым непонятным пятном, поясню какой смысл я вкладываю в этот термин.

@@ -6,6 +6,7 @@ categories:
 tags: 
   - "video"
   - "strojka"
+permalink: "stroim-iz-meshkov-video/"
 ---
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/iaFg_7qYzzI" frameborder="0" allowfullscreen></iframe>

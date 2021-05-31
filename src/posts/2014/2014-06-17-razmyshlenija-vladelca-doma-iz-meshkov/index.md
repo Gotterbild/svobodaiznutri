@@ -7,7 +7,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "2014-05-04-16-19-02.jpg"
-permalink: "/"
+permalink: "razmyshlenija-vladelca-doma-iz-meshkov/"
 ---
 
 Мы с женой [мечтали](http://svobodaiznutri.ru/s-chego-vsyo-nachalos/ "С чего всё началось") об экодоме, долго размышляли [из чего строить](http://svobodaiznutri.ru/likbez-po-tehnologiam-ekostroitelstva/ "Ликбез по технологиям экостроительства"), и в итоге [построили себе дом из мешков с грунтом](http://svobodaiznutri.ru/stroim-iz-meshkov-s-gruntom/ "Строим из мешков с грунтом").

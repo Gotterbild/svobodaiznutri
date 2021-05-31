@@ -7,7 +7,7 @@ tags:
   - "budni"
   - "strojka"
 coverImage: "iglu-otel-rossiya.jpg"
-permalink: "/"
+permalink: "ekostroitelstvo-v-zimniy-period/"
 ---
 
 Вы когда-нибудь ночевали в палатке при температуре внешнего воздуха -20°C? Мы — да! Это был не экстремальный туризм забавы ради. Это было экстремальное экостроительство!
