@@ -39,6 +39,17 @@ module.exports = function(eleventyConfig) {
     })
   })
 
+  eleventyConfig.addFilter('datetime', function(value) {
+    const date = new Date(value)
+    return date.toLocaleTimeString('ru', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    })
+  })
+
   // TODO
   eleventyConfig.addFilter('tagLink', function(value) {
     return `/tag/${value}`

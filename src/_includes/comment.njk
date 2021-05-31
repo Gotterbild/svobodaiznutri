@@ -1,0 +1,11 @@
+<div class="comment {%if comment.is_answer %}depth-2{% else %}depth-1 parent{% endif %}{%if comment.is_post_author %} bypostauthor{% endif %}" id="comment-{{comment.id}}">
+  <div class="header" role="complementary">
+    {# <a href="#comment_{{comment.id}}">#{{comment.id}}</a> #}
+    <div class="date">{{comment.datetime | datetime}}</div>
+    <h4>{{comment.author}}</h4>
+  </div>
+  <div class="text">
+    <div class="body">{{comment.text | nl2br | safe}}</div>
+    {# <a rel='nofollow' class='comment-reply-link' aria-label='Ответить на комментарий'>Ответить</a> #}
+  </div>
+</div>

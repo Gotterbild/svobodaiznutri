@@ -352,12 +352,15 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 		.comment.bypostauthor .header { color: #181310; }
 			.comment.bypostauthor .header a { color: #fff }
 	.comment .text { padding: 1rem;	}
-		.comment .comment-reply-link { float: left; font-size: 1em; }
+		.comment .comment-reply-link {
+			float: left;
+			font-size: 1em;
+			margin-top: 1rem;
+		}
 		.comment .date {
 			float: right;
 			font-family: 'Ubuntu Condensed', sans-serif;
 			color: #CBCBCB;
-			margin-top: 1em;
 		}
 .comment-respond form { padding-bottom: 1px; }
 	.comment-respond h3 {
