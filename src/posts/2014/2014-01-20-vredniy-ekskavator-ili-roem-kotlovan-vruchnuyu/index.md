@@ -12,6 +12,13 @@ tags:
   - "filosofiya"
 coverImage: "shovel-knight-mega-man-influence.jpg"
 permalink: "vredniy-ekskavator-ili-roem-kotlovan-vruchnuyu/"
+description: "Как мы выкопали 70 кубов грунта, и почему."
+keywords:
+  - землянка
+  - роем землянку
+  - копаем землянку
+  - котлован под дом
+  - котлован под дом вручную
 ---
 
 Закончили на том, как [жили в доме на дереве](/pro-jizn-na-dereve) и [начали рыть котлован]( /proekt-razmetka-i-nachalo-rytia) для нашего будущего [экодома](/dom-za-100-tysyach-rubley). Разумеется, нам в голову приходила мысль нанять экскаватор. И у нас были на него деньги.
