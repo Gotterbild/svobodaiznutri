@@ -11,7 +11,7 @@ tags:
   - "teoriya"
   - "filosofiya"
 coverImage: "DSC00547.jpg"
-permalink: "/"
+permalink: "oshibki-nachinayuschih-ekostroitelei-2/"
 ---
 
 Продолжаю писать про ошибки начинающих экостроителей. Про те грабли, на которые натолкнулись мы сами, пока строили наш экодом.

@@ -11,7 +11,7 @@ tags:
   - "teoriya"
   - "filosofiya"
 coverImage: "osb-saman.jpg"
-permalink: "/"
+permalink: "razmyshleniya-ob-osp-zhilom-prostranstve-otoplenii-i-lyogkom-samane/"
 ---
 
 Развалится ли ОСП в первую зиму, какой размер жилого пространства необходим, сколько нужно тратить на отопление и насколько усаживается лёгкий саман — об этом новая статья.

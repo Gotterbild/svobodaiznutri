@@ -8,7 +8,7 @@ tags:
   - "опыт"
   - "стройка"
 coverImage: "WhatsApp-Image-2018-10-22-at-09.39.59-2.jpeg"
-permalink: "/"
+permalink: "nadyozhny-li-steny-doma-iz-meshkov/"
 ---
 
 Надеюсь, вы прочитали нашу историю и знаете, что наш экодом был уничтожен [лесным пожаром](/fire/). Всё, что осталось - это стены и печь.

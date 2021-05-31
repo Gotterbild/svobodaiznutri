@@ -6,9 +6,8 @@ categories:
   - "eko-stroitelstvo"
 tags: 
   - "otoplenie"
+permalink: "chertyozh-pechi-i-printsipy-raboty/"
 ---
-
-.sign{width: 1.5em;<br />padding: 0em;<br />background-color: #63BFD8;<br />border-radius: 2em;<br />display: inline-table;<br />text-align: center;<br />box-shadow: 0 0 0 2px #000;<br />font-weight: 600;<br />margin: 0 0.25em;<br />font-size: 12px;<br />height: 1em;}
 
 Ох, как долго многие из вас ждали этого момента!
 

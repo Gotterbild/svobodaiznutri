@@ -7,7 +7,7 @@ tags:
   - "otoplenie"
   - "strojka"
 coverImage: "2015-03-21.jpg"
-permalink: "/"
+permalink: "kupol-pechi/"
 ---
 
 Появилась свободная минутка, решил потратить её на продолжение печной темы.

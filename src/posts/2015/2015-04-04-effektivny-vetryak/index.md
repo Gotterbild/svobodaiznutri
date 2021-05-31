@@ -6,7 +6,7 @@ categories:
 tags: 
   - "elektrichestvo"
 coverImage: "preview.jpg"
-permalink: "/"
+permalink: "effektivny-vetryak/"
 ---
 
 Никак не найду времени разгребать материалы, чтоб написать следующую статью по печке. И тут мне подкинули информацию, которой не могу не поделиться.

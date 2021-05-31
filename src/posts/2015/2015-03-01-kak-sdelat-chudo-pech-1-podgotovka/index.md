@@ -11,7 +11,7 @@ tags:
   - "strojka"
   - "fundament"
 coverImage: "2014-05-21-16-37-46.jpg"
-permalink: "/"
+permalink: "kak-sdelat-chudo-pech-1-podgotovka/"
 ---
 
 Итак, некоторое время назад я поделился примерными чертежами нашей чудо-печи, и теперь пришло время от теории перейти к практике.

@@ -6,7 +6,7 @@ categories:
 tags: 
   - "filosofiya"
 coverImage: "rostok.jpg"
-permalink: "/"
+permalink: "mysli-i-celi/"
 ---
 
 Довольно давно у меня в голове крутится ворох мыслей.

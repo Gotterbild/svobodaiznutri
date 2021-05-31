@@ -7,10 +7,11 @@ categories:
 tags: 
   - "video"
   - "filosofiya"
+permalink: "gorodskie-istorii-odin-den-v-rostovgrade/"
 ---
 
 Я уже неоднократно упоминал про наших соседей — Ваню и Илону. Пришло время познакомиться с ними поближе. С их великодушного разрешения.
 
 Если что, эта передача вышла раньше чем передача про нас («Три холма»), которую я выкладывал месяц назад. Но от этого она не становиться менее интересной!
 
-http://www.youtube.com/watch?v=10dYj\_nS1Sc&feature=youtu.be
+<iframe src="//www.youtube.com/embed/10dYj\_nS1Sc" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>

@@ -7,7 +7,7 @@ tags:
   - "novosti"
   - "strojka"
 coverImage: "kupol.jpg"
-permalink: "/"
+permalink: "kupolny-dom-svoimi-rukami-i-minimalnymi-sredstvami/"
 ---
 
 А вы задумывались о постройке себе дома купольной формы? А знаете ли вы, что построить себе купольный дом — проще и доступней чем вам кажется!

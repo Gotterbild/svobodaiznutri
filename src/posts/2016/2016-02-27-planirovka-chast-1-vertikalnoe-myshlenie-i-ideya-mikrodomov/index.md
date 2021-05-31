@@ -12,7 +12,7 @@ tags:
   - "teoriya"
   - "filosofiya"
 coverImage: "Tiny_House_Giant_Journey_in_the_Petrified_Forest_and_an_RV.jpg"
-permalink: "/"
+permalink: "planirovka-chast-1-vertikalnoe-myshlenie-i-ideya-mikrodomov/"
 ---
 
 **Сколько пространства нужно для комфортного проживания молодой семьи?** Я подойду к этой теме с непривычной для русского человека стороны. Уверен, не все воспримут высказанное в статье положительно. Но эта информация наверняка сподвигнет вас к оптимизации вашего жилого пространства и подкинет несколько отличных идей.

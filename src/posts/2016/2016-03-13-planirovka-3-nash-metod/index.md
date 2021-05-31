@@ -11,7 +11,7 @@ tags:
   - "planirovanie"
   - "teoriya"
 coverImage: "paper_castle.jpg"
-permalink: "/"
+permalink: "planirovka-3-nash-metod/"
 ---
 
 Все вы давно ждёте момента, когда же я расскажу про нашу планировку. Этот волнительный час настал!

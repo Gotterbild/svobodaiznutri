@@ -11,7 +11,7 @@ tags:
   - "teoriya"
   - "filosofiya"
 coverImage: "hands.jpg"
-permalink: "/"
+permalink: "oshibki-nachinauschih-ekostroiteley-3-sozdanie-ekoposelenia/"
 ---
 
 [В прошлый раз](http://svobodaiznutri.ru/oshibki-nachinayuschih-ekostroitelei-2/) я обещал, что подробнее раскрою тему общения. Но, видимо, нужно подойти более широко и концептуально. Хочется сказать даже не про собственно общение, а про людей, с которыми начинаете какой-то крупный проект, в том числе строительство экопоселения.
