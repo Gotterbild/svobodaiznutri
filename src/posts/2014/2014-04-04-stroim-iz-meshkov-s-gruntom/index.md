@@ -7,6 +7,7 @@ tags:
   - "budni"
   - "strojka"
 coverImage: "earthbag.jpg"
+permalink: "/"
 ---
 
 Итак, от [теории](http://svobodaiznutri.ru/?p=13) перейдём к практике! Напомню, мы [решили](http://svobodaiznutri.ru/?p=13) строить дом из суперсамана (в народе — дом из мешков, earthbag, superadobe). Но прежде чем возводить стены, было необходимо решить несколько технических вопросов...

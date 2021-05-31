@@ -9,6 +9,7 @@ tags:
   - "strojka"
   - "teoriya"
 coverImage: "Planning.jpg"
+permalink: "/"
 ---
 
 Итак, друзья, начинаем планирование нашей новой стройки!

@@ -11,6 +11,7 @@ tags:
   - "filosofiya"
   - "fundament"
 coverImage: "poryadok_vozvedeniya.jpg"
+permalink: "/"
 ---
 
 Напомню, в прошлый раз я [рассказал про виды грунтов](http://svobodaiznutri.ru/?p=18) с точки зрения возведения на них любых строений, в том числе и [экодома](http://svobodaiznutri.ru/?p=36).

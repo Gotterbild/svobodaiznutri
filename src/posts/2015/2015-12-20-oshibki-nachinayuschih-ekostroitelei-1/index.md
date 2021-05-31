@@ -10,6 +10,7 @@ tags:
   - "teoriya"
   - "filosofiya"
 coverImage: "grabli.jpg"
+permalink: "/"
 ---
 
 Как и [обещал](http://svobodaiznutri.ru/zdravstvuite-dorogie-chitateli/), эта статья — про ошибки, которые допускают многие начинающие экостроители. Ошибки, которых не избежали и мы.

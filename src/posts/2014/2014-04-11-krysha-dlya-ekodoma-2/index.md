@@ -8,6 +8,7 @@ tags:
   - "krysha"
   - "strojka"
 coverImage: "Obresh.jpg"
+permalink: "/"
 ---
 
 Эта статья — продолжение [предыдущей](http://svobodaiznutri.blogspot.ru/2014/04/krysha-dlya-ekodoma-1.html). Если не читали предыдущую, вы не узнаете почему мы приняли именно такое решение конструкции крыши и какие варианты рассматривали.

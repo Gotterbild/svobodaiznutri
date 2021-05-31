@@ -10,6 +10,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "shovel-knight-mega-man-influence.jpg"
+permalink: "/"
 ---
 
 Закончили на том, как [жили в доме на дереве](http://svobodaiznutri.ru/?p=22) и [начали рыть котлован](http://svobodaiznutri.ru/?p=23) для нашего будущего [экодома](http://svobodaiznutri.ru/?p=36). Разумеется, нам в голову приходила мысль нанять экскаватор. И у нас были на него деньги.

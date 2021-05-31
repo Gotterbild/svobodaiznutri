@@ -6,6 +6,7 @@ categories:
 tags: 
   - "filosofiya"
 coverImage: "rostok.jpg"
+permalink: "/"
 ---
 
 Довольно давно у меня в голове крутится ворох мыслей.

@@ -8,6 +8,7 @@ tags:
   - "krysha"
   - "strojka"
 coverImage: "double-reciprocal-roof2.jpg"
+permalink: "/"
 ---
 
 Мы [возвели стены](http://svobodaiznutri.ru/?p=12) нашего [экодома](http://svobodaiznutri.ru/?p=36) и, казалось, самое тяжёлое — позади. Всего-то делов: сделать перекрытие и крышу. Но была одна загвоздка: наш дом [круглый](http://svobodaiznutri.ru/?p=33), да ещё и [вкопан в холм](http://svobodaiznutri.ru/?p=32), а потому обычные варианты крыш нам не подошли бы.

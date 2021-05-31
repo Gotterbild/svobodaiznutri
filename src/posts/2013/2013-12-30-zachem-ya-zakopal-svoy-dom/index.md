@@ -9,6 +9,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "0000357225.jpg"
+permalink: "zachem-ya-zakopal-svoy-dom/"
 ---
 
 Про причины выбора круглой формы дома я рассказывал в [прошлый раз](http://svobodaiznutri.ru/?p=33), сегодня разберёмся с вкопанностью.

@@ -7,6 +7,7 @@ tags:
   - "likbez"
   - "otoplenie"
 coverImage: "DSC01541.jpg"
+permalink: "/"
 ---
 
 Ну вот мы и подошли к практике! Самое интересное уже позади: [чертежи](http://svobodaiznutri.ru/chertyozh-pechi-i-printsipy-raboty/ "Чертёж нашей печи и принципы её работы"), [планирование](http://svobodaiznutri.ru/kak-sdelat-chudo-pech-1-podgotovka/ "Как сделать чудо-печь. Часть 1: Подготовка"), [технология изготовления купола](http://svobodaiznutri.ru/kupol-pechi/ "Как сделать чудо-печь. Часть 2: Купол печи").

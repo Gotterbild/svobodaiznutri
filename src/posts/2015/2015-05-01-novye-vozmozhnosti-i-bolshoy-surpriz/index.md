@@ -6,6 +6,7 @@ categories:
 tags: 
   - "novosti"
 coverImage: "elitefon.ru-34163.jpg"
+permalink: "/"
 ---
 
 Здравствуйте, дорогие читатели! Спасибо что вы с нами!

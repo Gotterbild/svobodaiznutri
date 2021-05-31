@@ -7,6 +7,7 @@ categories:
 tags: 
   - "novosti"
 coverImage: "onthehill-e1454521254403.jpg"
+permalink: "/"
 ---
 
 У меня для вас хорошая новость. Мы приняли решение. **Мы будем строиться опять!**

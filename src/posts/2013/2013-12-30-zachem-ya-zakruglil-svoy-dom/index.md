@@ -9,6 +9,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "krug.jpg"
+permalink: "zachem-ya-zakruglil-svoy-dom/"
 ---
 
 Хоть [технология строительства](http://svobodaiznutri.ru/?p=34) и была нам не до конца ясна, но мы знали наверняка, что:

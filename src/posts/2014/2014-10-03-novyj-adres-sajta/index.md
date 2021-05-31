@@ -6,6 +6,7 @@ categories:
 tags: 
   - "novosti"
 coverImage: "RF_style_2.jpg"
+permalink: "/"
 ---
 
 Отличные новости!

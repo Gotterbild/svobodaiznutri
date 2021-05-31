@@ -9,6 +9,7 @@ tags:
   - "otoplenie"
   - "filosofiya"
 coverImage: "inertia.jpg"
+permalink: "/"
 ---
 
 Я уже пару раз [упоминал](http://svobodaiznutri.ru/?p=33) про инерционность. Чтобы такие упоминания не были белым непонятным пятном, поясню какой смысл я вкладываю в этот термин.

@@ -9,6 +9,7 @@ tags:
   - "strojka"
   - "fundament"
 coverImage: "znak-zames.png"
+permalink: "/"
 ---
 
 Итак, мы сделали [«курьи ножки» фундамента](http://svobodaiznutri.ru/?p=20) нашего [экодома](http://svobodaiznutri.ru/?p=36). А на следующий день приехал отец и работа закипела!  

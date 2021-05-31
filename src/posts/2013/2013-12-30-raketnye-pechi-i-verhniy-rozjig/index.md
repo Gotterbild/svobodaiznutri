@@ -6,6 +6,7 @@ categories:
 tags: 
   - "otoplenie"
 coverImage: "Raket.jpg"
+permalink: "raketnye-pechi-i-verhniy-rozjig/"
 ---
 
 В поисках идеальной системы отопления для [нашего экодома](http://svobodaiznutri.ru/?p=36) я уже рассказал [про пассивные дома](http://svobodaiznutri.ru/?p=30), а также про печи почти всех видов: [голландки и русские](http://svobodaiznutri.ru/?p=29), [колпаковые и двухколпаковые](http://svobodaiznutri.ru/?p=28). Теперь же настала пора рассказать про новые веяния в печкостроении.

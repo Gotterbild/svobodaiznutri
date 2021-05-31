@@ -9,6 +9,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "zima.jpg"
+permalink: "/"
 ---
 
 _«Куда это они запропастились?»_ — спросите вы. Да уж, давненько я не писал.

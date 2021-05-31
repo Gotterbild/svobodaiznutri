@@ -6,6 +6,7 @@ categories:
 tags: 
   - "otoplenie"
 coverImage: "25D0-25B3-25D0-25BE-25D0-25BB-25D0-25BB-25D0-25B0-25D0-25BD-25D0-25B4.jpg"
+permalink: "otoplenie-pechi-gollandki-i-russkie/"
 ---
 
 В [прошлый раз](http://svobodaiznutri.ru/?p=30) была теория про пассивные дома и водяное отопление. Сегодня про печное.

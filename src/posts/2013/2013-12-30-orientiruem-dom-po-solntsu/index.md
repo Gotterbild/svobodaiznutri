@@ -9,6 +9,7 @@ tags:
   - "strojka"
   - "filosofiya"
 coverImage: "Stoyach_camni.jpg"
+permalink: "orientiruem-dom-po-solntsu/"
 ---
 
 В прошлые разы я рассказывал [почему дом у нас круглый](http://svobodaiznutri.ru/?p=33) и [почему он вкопан в холм](http://svobodaiznutri.ru/?p=32). Сегодня — **про строгую ориентацию по Солнцу**.

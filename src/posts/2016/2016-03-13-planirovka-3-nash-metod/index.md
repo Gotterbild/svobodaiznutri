@@ -11,6 +11,7 @@ tags:
   - "planirovanie"
   - "teoriya"
 coverImage: "paper_castle.jpg"
+permalink: "/"
 ---
 
 Все вы давно ждёте момента, когда же я расскажу про нашу планировку. Этот волнительный час настал!

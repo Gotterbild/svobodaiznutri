@@ -8,6 +8,7 @@ categories:
 tags: 
   - "otoplenie"
 coverImage: "passive-house-cartoon.jpg"
+permalink: "otoplenie-passivnie-doma-i-vodyanoe-otoplenie/"
 ---
 
 Итак, мы определились, что дом у нас будет [круглый](http://svobodaiznutri.ru/?p=33), [вкопанный в холм](http://svobodaiznutri.ru/?p=32) и [сориентированный по Солнцу](http://svobodaiznutri.ru/?p=31). И перед нами встал выбор способа отопления.
