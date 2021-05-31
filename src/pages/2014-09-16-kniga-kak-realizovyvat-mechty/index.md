@@ -2,6 +2,9 @@
 layout: post
 title: "Книга «Как реализовывать мечты?»"
 date: "2014-09-16"
+eleventyExcludeFromCollections: true
+permalink: false
+# permalink: "kniga-kak-realizovyvat-mechty/"
 ---
 
 ![Книга «Как реализовывать мечты?»](images/My-Cover-Design.png)

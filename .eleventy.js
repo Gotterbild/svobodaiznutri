@@ -3,7 +3,7 @@ const htmlmin = require('html-minifier')
 // const pageAssetsPlugin = require('eleventy-plugin-page-assets')
 // Using custom version of plugin due to bug that is not fixed in original lib (PRs with fix not accepted)
 const pageAssetsPlugin = require('./src/_11ty/eleventy-plugin-page-assets')
-const i18n = require('./src/_11ty/i18n.js')
+const i18n = require('./src/_data/i18n.js')
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setQuietMode(true)
@@ -48,6 +48,17 @@ module.exports = function(eleventyConfig) {
       hour: '2-digit',
       minute: '2-digit',
     })
+  })
+
+  eleventyConfig.addFilter('postExcerpt', function(content) {
+    const readmore = '<!-- READMORE -->'
+    const regex = new RegExp(readmore)
+
+    if (content.match(regex))
+      return content.split(readmore)[0]
+
+    const lines = content.split('\n')
+    return lines[0]
   })
 
   // TODO

@@ -17,7 +17,6 @@ layout: layout
 				<div class="thumb" style="background-image:
 					url({% if coverImage %}'{{'images/'+coverImage | url}}'{% else %}'{{'/images/default.png' | url}}'{% endif %});">
 
-
 					<header>
 						<h1>{{title}}</h1>
 						<div class="meta">
@@ -32,7 +31,6 @@ layout: layout
 					</header>
 
 				</div>
-
 
 				<div class="text">
 				  {{content | safe}}
@@ -51,32 +49,24 @@ layout: layout
 						<div class="pluso" data-background="none;" data-options="big,square,line,horizontal,counter,sepcounter=1,theme=14" data-services="email,vkontakte,odnoklassniki,facebook,twitter,google,livejournal"></div>
 					</div> #}
 
-{# 					{% // Generating links to previous and next posts
-						$prev_post = get_previous_post();
-						$prev_post_url = get_permalink($prev_post->ID);
-						$next_post = get_next_post();
-						$next_post_url = get_permalink($next_post->ID);
-						$current_url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-						if( $next_post_url == $current_url )
-							$nonext = true;
-						elseif( $prev_post_url == $current_url )
-							$noprev = true;
-					%} #}
+					{% set previousPost = collections.all | getPreviousCollectionItem(page) %}
+					{% if previousPost %}
+						<a href="{{previousPost.url}}" class="prev">
+							<div>Предыдущая статья</div>
+							<span>«{{previousPost.data.title}}»</span>
+						</a>
+					{% endif %}
 
-{# 					{%if( !$noprev ):%}
-						<a class="prev" href="{%=$prev_post_url;%}#post" title="Предыдущая статья: «{%=$prev_post->post_title%}»">&lt; Предыдущая статья<br><span>«{%=$prev_post->post_title%}»</span></a>
-					{%endif%}
+					{% set nextPost = collections.all | getNextCollectionItem(page) %}
+					{% if nextPost %}
+						<a href="{{nextPost.url}}" class="next">
+							<div>Следующая статья</div>
+							<span>«{{nextPost.data.title}}»</span>
+						</a>
+					{% endif %}
 
-					{%if( !$nonext ):%}
-						<a class="next" href="{%=$next_post_url;%}#post" title="Следующая статья: «{%=$next_post->post_title%}»">Следующая статья &gt;<br><span>«{%=$next_post->post_title%}»</span></a>
-					{%endif%}
- #}
 				</div>
 			</article>
-
-			{# <div id="afterpost" class="sidebar"> #}
-				{# {% dynamic_sidebar('endpost-sidebar'); %} #}
-			{# </div> #}
 
 			{% include 'comments.njk' %}
 

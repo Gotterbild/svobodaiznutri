@@ -23,7 +23,7 @@ module.exports = {
   'eko-otoplenie': 'Отопление',
   'eko-myshlenie': 'Эко-мышление',
   'eko-fundament': 'Фундамент',
-  'eko-elektrichestvo': 'Эко=электричество',
+  'eko-elektrichestvo': 'Эко-электричество',
   'news': 'Новости',
 
   'vseStatyi': 'Все статьти',

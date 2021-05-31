@@ -2,6 +2,9 @@
 layout: post
 title: "Вы отписались от рассылки"
 date: "2014-06-14"
+eleventyExcludeFromCollections: true
+permalink: false
+# permalink: "otpiska/"
 ---
 
 Хорошо, я больше не буду вам писать. Надеюсь, я сделал вас хоть на капельку счастливее своими текстами.
