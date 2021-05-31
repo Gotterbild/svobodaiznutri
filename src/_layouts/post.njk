@@ -21,8 +21,8 @@ layout: layout
 							{% if tags %}
 								<span class="divider"></span>
 								{% for tag in tags -%}
-									<a class="tag" href='{{tag | tagLink}}'>{{tag | tag}}</a>
-								{%- endfor %}
+									<a class="tag" href='{{tag | tagLink}}'>{{tag | i18n}}</a>{% if loop.index !== tags.length %},{% endif %}
+								{% endfor %}
 							{% endif %}
 						</div>
 					</header>

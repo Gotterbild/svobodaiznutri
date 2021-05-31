@@ -1,8 +1,12 @@
 const fs = require('fs')
 const htmlmin = require('html-minifier')
-const pageAssetsPlugin = require('eleventy-plugin-page-assets')
+// const pageAssetsPlugin = require('eleventy-plugin-page-assets')
+// Using custom version of plugin due to bug that is not fixed in original lib (PRs with fix not accepted)
+const pageAssetsPlugin = require('./src/_11ty/eleventy-plugin-page-assets')
+const i18n = require('./src/_11ty/i18n.js')
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setQuietMode(true)
 
   if (process.env.ELEVENTY_PRODUCTION) {
     eleventyConfig.addTransform('htmlmin', htmlminTransform)
@@ -12,24 +16,13 @@ module.exports = function(eleventyConfig) {
 
   // Passthrough
   eleventyConfig.addPassthroughCopy({ 'src/static': '.' })
-  // eleventyConfig.addPassthroughCopy({ 'src/*': (data) => {
-  //   console.log('!!!!!!!!! data !!!!!!!!!!!!!', data)
-  //   return data
-  // }})
-  // eleventyConfig.addPassthroughCopy({ '**/images': 'images' })
-  // eleventyConfig.setTemplateFormats([
-  //   'md',
-  //   'jpg', 'jpeg', 'png', 'svg',
-  //   'doc', 'pdf',
-  //   'css',
-  // ])
   eleventyConfig.addPlugin(pageAssetsPlugin, {
     mode: 'directory',
     postsMatching: '*.md',
     assetsMatching: '*.pdf|*.doc|*.png|*.jpeg|*.jpg|*.gif',
+    recursive: true,
     // hashAssets: false,
   })
-
 
   // Watch targets
   eleventyConfig.addWatchTarget('./src/styles/')
@@ -43,16 +36,13 @@ module.exports = function(eleventyConfig) {
     })
   })
 
+  // TODO
   eleventyConfig.addFilter('tagLink', function(value) {
-    return value
+    return `/tag/${value}`
   })
 
-  eleventyConfig.addFilter('tag', function(key) {
-    const translations = {
-      strojka: 'стройка',
-      filosofiya: 'философия',
-    }
-    return translations[key] || key
+  eleventyConfig.addFilter('i18n', function(key) {
+    return i18n[key] || key
   })
 
   var pathPrefix = ''
