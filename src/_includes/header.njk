@@ -1,22 +1,23 @@
 <header id="header">
 	<div class="grid">
-		<div class="table">
-			<div id="logobox">
-				<a class="logo" href="/"><img src="{{ '/images/svo_baloon_white.svg' | url}}" alt="{{metadata.title}}"></a>
-				<a class="logoname" href="/" tabindex="-1"><img src="{{ '/images/logoname.png' | url}}" alt="{{metadata.title}}"></a>
-			</div>
+		<div class="header-content">
+			<a class="logo" href="/" id="logobox">
+				<img
+					src="{{ '/images/svo_baloon_white.svg' | url}}"
+					alt="Логотип {{metadata.title}}"
+					class="logo-image"
+				/>
+				<img src="{{ '/images/logoname.png' | url}}" alt="{{metadata.title}}. {{metadata.slogan}}">
+			</a>
 			<div class="menu">
-  			{% include 'menu.njk' %}
+				{% include 'menu.njk' %}
 			</div>
-			<div class="burgerwrap">
-				<a class="burger" href="#"><span></span><span></span><span></span></a>
-			</div>
-			<div class="clr"></div>
+			<button class="burger" aria-label="Меню" aria-label="Меню"><span></span><span></span><span></span></button>
 		</div>
-	</div>
-	<div class="menu-mobile">
-		<div class="menuwrap">
-			{% include 'menu.njk' %}
+		<div class="menu-mobile">
+			<div class="menuwrap">
+				{% include 'menu.njk' %}
+			</div>
 		</div>
 	</div>
 </header>

@@ -5,6 +5,7 @@
   {% for comment in comments %}
     {% include 'comment.njk' %}
     {% for comment in comment.answers %}
+      {% set is_answer = true %}
       {% include 'comment.njk' %}
     {% endfor %}
   {% endfor %}

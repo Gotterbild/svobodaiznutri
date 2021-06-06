@@ -5,8 +5,6 @@ Based on ![Windty](https://github.com/distantcam/windty), but heavily reworked.
 
 TODO:
 
-- Add <!-- READMORE --> tags to all articles
-- Мобильное меню (JS)
 - Страницы тегов
 - Страницы категорий
 - Под комментариями написать, что они закрыты. Для связи с автором используйте соцсети или почту (?).
@@ -16,3 +14,4 @@ TODO:
 	- lazy loading
 - Проверить каждую статью и страницу
 - Комментарии
+- Add <!-- READMORE --> tags to all articles

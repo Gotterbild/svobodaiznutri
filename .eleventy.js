@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
   }
 
   eleventyConfig.addPassthroughCopy({ 'src/static': '.' })
+  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPlugin(pageAssetsPlugin, {
     mode: 'directory',
     postsMatching: '*.md',
@@ -23,8 +24,9 @@ module.exports = function(eleventyConfig) {
     // hashAssets: false,
   })
   // eleventyConfig.setTemplateFormats([
-  //   // "md",
-  //   "css",
+    // "md",
+    // "css",
+    // "js",
   // ]);
 
   // Watch targets

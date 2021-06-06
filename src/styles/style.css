@@ -48,10 +48,7 @@ blockquote p:last-child { margin-bottom: 0; }
 h2 a,
 h2 a { color: #98816A; }
 *, *:before, *:after {
-	-webkit-transition: ease-out 0.5s;
-	-moz-transition: 	ease-out 0.5s;
-	-o-transition: 		ease-out 0.5s;
-	transition: 		ease-out 0.5s;
+	transition: 		ease-out 0.25s;
 }
 img { max-width: 100%; }
 input, textarea {
@@ -116,18 +113,24 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 	margin-bottom: 1rem;
 	font-family: 'Ubuntu Condensed', sans-serif;
 }
-	#header #logobox {
-		display: table;
-		max-width: 350px;
-		float: left;
-	}
-		#header #logobox .logo {
-			width: 79px;
-			height: 79px;
-			display: table-cell;
-			vertical-align: middle;
-		}
-			#header #logobox .logo img { width: 100%; }
+#header .header-content {
+	display:  flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+#header .logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: calc(100vw - 12rem);
+	max-width: 22rem;
+}
+#header .logo .logo-image {
+	max-width: 79px;
+	max-height: 79px;
+	margin-right: 5%;
+}
 		#header #logobox .logoname {
 			display: none;
 			vertical-align: middle;
@@ -135,17 +138,20 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 		}
 	#header .menu {
 		display: none;
-		vertical-align: middle;
-		width: calc(100% - 350px);
+		width: 100%;
 	}
-	#header .menu nav { float: right; }
+	#header .menu nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 		#header .menu nav a {
+			white-space: nowrap;
 			color: #fff;
 			padding: 1em;
 			text-transform: uppercase;
 			background-position: center top;
-			list-style-type: none;
-			display: inline-block;
 		}
 		#header .menu nav a.current-menu-item,
 		#header .menu nav a:hover {
@@ -153,38 +159,63 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 			background: url('images/wood-dark.png') center top repeat #181310;
 			color: #fff;
 		}
-	#header .burgerwrap {
-		display: table-cell;
-		vertical-align: middle;
-		width: 54px;
-	}
 		#header .burger {
+			flex-shrink: 0;
 			font-size: 2em;
-			display: block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 			border: 3px solid;
 			padding: 0.125em;
 			color: #181310;
+			background: transparent;
 			background-position: center top;
-			width: 54px;
-			height: 48px;
 			overflow: hidden;
+			cursor:  pointer;
+			width: 1.25em;
 		}
 
 			#header .burger span {
-				display: block;
+				flex-shrink: 0;
+				width: 100%;
 				background-color: #181310;
-				width: 0.75em;
 				height: 3px;
-				margin: 6px;
+				margin: 3px;
 				opacity: 1;
 			}
-			#header .burger.close span:nth-child(1) { transform: rotate(45deg); margin-top: 0.85rem; }
-			#header .burger.close span:nth-child(2) { transform: rotate(-225deg); margin-top: -0.5rem; margin-bottom: 0.375rem; }
-			#header .burger.close span:nth-child(3) { transform: rotate(-225deg); margin-top: -0.5rem;	margin-bottom: 0.375rem; opacity: 0; }
+			#header .burger.close span:nth-child(1) {
+				transform: rotate(45deg) translate(0.2em, 0.2em);
+			}
+			#header .burger.close span:nth-child(2) {
+				transform: rotate(-225deg) translate(0.01em, -0.01em);
+				/*margin-top: -0.5rem;*/
+				/*margin-bottom: 0.375rem;*/
+			}
+			#header .burger.close span:nth-child(3) {
+				transform: rotate(-225deg) translate(0.2em, 0.2em);
+				/*margin-top: -0.5rem;*/
+				/*margin-bottom: 0.375rem;*/
+				opacity: 0;
+			}
+
+  main {
+  	position: relative;
+  	z-index:  -2;
+  }
 	#header .menu-mobile {
 		width: 100%;
 		margin: 1rem 0;
-		display: none;
+		background: url('images/wood-transparent.png') top center repeat #98816A;
+		position: absolute;
+		pointer-events: none;
+		transform: translateY(-100%);
+		left:  0;
+		z-index: -1;
+	}
+	#header .menu-mobile.show {
+		pointer-events: auto;
+		transform: translateY(0);
 	}
 		#header .menu-mobile .menuwrap { display: table; width: 100%; }
 		#header .menu-mobile nav { display: table-cell; vertical-align: center }

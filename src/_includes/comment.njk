@@ -1,4 +1,4 @@
-<div class="comment {%if comment.is_answer %}depth-2{% else %}depth-1 parent{% endif %}{%if comment.is_post_author %} bypostauthor{% endif %}" id="comment-{{comment.id}}">
+<div class="comment {%if is_answer %}depth-2{% else %}depth-1 parent{% endif %}{%if comment.is_post_author %} bypostauthor{% endif %}" id="comment-{{comment.id}}">
   <div class="header" role="complementary">
     {# <a href="#comment_{{comment.id}}">#{{comment.id}}</a> #}
     <div class="date">{{comment.datetime | datetime}}</div>

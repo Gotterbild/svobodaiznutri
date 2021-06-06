@@ -3,6 +3,7 @@ module.exports = {
   website_url: 'https://svobodaiznutri.ru',
   domain: 'svobodaiznutri.ru',
   title: 'Свобода Изнутри',
+  slogan: 'Экология мышления - гармония жизни',
   description: 'Как построить дом всего за 100 тысяч рублей? Строим дом из мешков своими руками. Ошибки при создании экопоселения.',
   keywords: [
     'экостроительство',
