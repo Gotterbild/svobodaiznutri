@@ -15,7 +15,8 @@ module.exports = function(eleventyConfig) {
   }
 
   eleventyConfig.addPassthroughCopy({ 'src/static': '.' })
-  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy('src/js');
+  eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPlugin(pageAssetsPlugin, {
     mode: 'directory',
     postsMatching: '*.md',
