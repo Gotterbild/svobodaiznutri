@@ -14,4 +14,4 @@ TODO:
 	- lazy loading
 - Проверить каждую статью и страницу
 - Комментарии
-- Add <!-- READMORE --> tags to all articles
+- <del> Для зачёркнутого текста

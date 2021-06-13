@@ -7,6 +7,8 @@ categories:
 tags: 
   - "video"
 permalink: "nash-sosed-roma/"
+coverImage: false
+noReadModeButton: true
 ---
 
 Последнее время очень много хлопот. Не получается выделять много времени на статьи, так что полноценный материал будет чуть позже. Но зато могу познакомить вас с нашим соседом, Ромой. Я уже упоминал его [в одной из статей про крышу](/krysha-dlya-ekodoma-2/).
@@ -17,5 +19,6 @@ permalink: "nash-sosed-roma/"
 
 Про хозяйство Ромы можно рассказать многое. Но чем читать тысячу слов, лучше посмотреть одно видео.
 
-http://www.youtube.com/watch?v=2i3ajUqxJ68
 <iframe src="//www.youtube.com/embed/2i3ajUqxJ68" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<!-- READMORE -->

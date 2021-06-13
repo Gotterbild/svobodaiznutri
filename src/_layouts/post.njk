@@ -11,12 +11,18 @@ layout: layout
 
 		<section id="content" class="blog post">
 
-			<article id="post">
+			<article>
+				<div
+					{% if coverImage === false %}
+					class="thumb no-image"
+					{% else %}
+					class="thumb"
+					style="background-image:
+					url({% if coverImage %}'{{'images/'+coverImage | url}}'{% else %}'{{'/images/default.png' | url}}'{% endif %})"
+					{% endif %}
+				>
 
-				<div class="thumb" style="background-image:
-					url({% if coverImage %}'{{'images/'+coverImage | url}}'{% else %}'{{'/images/default.png' | url}}'{% endif %})">
-
-					<header>
+					<header id="post">
 						<h1>{{title}}</h1>
 						<div class="meta">
 							<span class="date">{{date | date}}</span>
@@ -57,7 +63,7 @@ layout: layout
 					{% endif %}
 
 					{% set nextPost = collections.all | getNextCollectionItem(page) %}
-					{% if nextPost.title %}
+					{% if nextPost %}
 						<a href="{{nextPost.url}}" class="next">
 							<div>Следующая статья</div>
 							<span>«{{nextPost.data.title}}»</span>

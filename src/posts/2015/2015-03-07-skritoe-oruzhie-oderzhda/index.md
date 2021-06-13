@@ -7,6 +7,8 @@ categories:
 tags: 
   - "video"
   - "filosofiya"
+coverImage: false
+noReadModeButton: true
 permalink: "skritoe-oruzhie-oderzhda/"
 ---
 
@@ -15,3 +17,5 @@ permalink: "skritoe-oruzhie-oderzhda/"
 Без зазрений совести выкладываю это видео, т.к. оно имеет прямое отношение к главной теме этого сайта — настоящей, а не карикатурной свободе.
 
 <iframe src="//www.youtube.com/embed/GAoqFi1mTD0" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<!-- READMORE -->

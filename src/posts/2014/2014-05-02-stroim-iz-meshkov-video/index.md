@@ -7,6 +7,8 @@ categories:
 tags: 
   - "video"
   - "strojka"
+coverImage: false
+noReadModeButton: true
 permalink: "stroim-iz-meshkov-video/"
 ---
 

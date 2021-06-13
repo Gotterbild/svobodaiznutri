@@ -9,9 +9,12 @@
 		margin-right: auto;
 	}
 	.page .blog article .thumb {
-	   margin-left: 0;
-	   margin-right: 0;
+	  margin-left: 0;
+	  margin-right: 0;
 		height: 70vh;
+	}
+	.page .blog article .thumb.no-image {
+		height: auto;
 	}
 	.page .blog article { margin: 1rem 0 2rem; }
 	.page .blog article .thumb header { padding: 1rem; }

@@ -112,6 +112,7 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 	padding: 1rem 0;
 	margin-bottom: 1rem;
 	font-family: 'Ubuntu Condensed', sans-serif;
+	z-index: 100;
 }
 #header .header-content {
 	display:  flex;
@@ -201,7 +202,6 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 
   main {
   	position: relative;
-  	z-index:  -2;
   }
 	#header .menu-mobile {
 		width: 100%;
@@ -211,11 +211,13 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 		pointer-events: none;
 		transform: translateY(-100%);
 		left:  0;
-		z-index: -1;
+		opacity: 0;
+		z-index: 999;
 	}
 	#header .menu-mobile.show {
 		pointer-events: auto;
 		transform: translateY(0);
+		opacity: 1;
 	}
 		#header .menu-mobile .menuwrap { display: table; width: 100%; }
 		#header .menu-mobile nav { display: table-cell; vertical-align: center }
@@ -292,6 +294,9 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 		height: auto;
 		width: 100%;
 	}
+	.page .blog article .thumb.no-image {
+		min-height: auto;
+	}
 		.page .blog article .thumb .link {
 			position: absolute;
 			width: 100%;
@@ -307,6 +312,10 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 			bottom: 0;
 			background: url('images/wood-transparent.png') center center repeat rgba(24, 19, 16, 0.5);
 		}
+	.page .blog article .thumb.no-image header {
+		position: static;
+	}
+
 			.page .blog article .thumb header h2,
 			.page .blog article .thumb header h1 { margin: 0px 0px 0.5rem; text-shadow: 0 0 0.5em #000;}
 			.page .blog article .thumb header,

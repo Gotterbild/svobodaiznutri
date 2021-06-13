@@ -15,11 +15,18 @@ layout: layout
 			{%- for post in posts %}
 				{% if post.data.title %}
 				  <article>
-				    <div class="thumb" style="background-image:
-				      url('{% if post.data.coverImage %}/{{post.data.permalink}}images/{{post.data.coverImage}}{% else %}{{'/images/default.png' | url}}{% endif %}')">
-				      <a href="/{{post.data.permalink}}#post" class="link"></a>
+				    <div
+							{% if post.data.coverImage == false %}
+				    	class="thumb no-image"
+				    	{% else %}
+				    	class="thumb"
+				    	style="background-image:
+				      url('{% if post.data.coverImage %}/{{post.data.permalink}}images/{{post.data.coverImage}}{% else %}{{'/images/default.png' | url}}{% endif %}')"
+				    	{% endif %}
+				     >
+				      <a href="/{{post.data.permalink}}" class="link"></a>
 				      <header>
-				        <h2><a href="/{{post.data.permalink}}#post">{{post.data.title}}</a></h2>
+				        <h2><a href="/{{post.data.permalink}}">{{post.data.title}}</a></h2>
 				        <div class="meta">
 				          <span class="date">{{post.data.date | date}}</span>
 				          <span class="divider"></span>
@@ -31,7 +38,9 @@ layout: layout
 				    </div>
 				    <div class="text">
 				      {{post._templateContent | postExcerpt | safe }}
-				      <a class="readmore" href="/{{post.data.permalink}}#post">Читать далее</a>
+				      {% if not post.data.noReadModeButton or post.data.comments %}
+			      	<a class="readmore" href="/{{post.data.permalink}}">Читать далее</a>
+				    	{% endif %}
 				    </div>
 				  </article>
 				{% endif %}

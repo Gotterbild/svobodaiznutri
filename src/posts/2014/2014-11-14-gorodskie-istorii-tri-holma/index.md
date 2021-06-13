@@ -8,6 +8,8 @@ categories:
 tags: 
   - "video"
   - "filosofiya"
+coverImage: false
+noReadModeButton: true
 permalink: "gorodskie-istorii-tri-holma/"
 ---
 
@@ -16,3 +18,5 @@ permalink: "gorodskie-istorii-tri-holma/"
 В передаче вы сможете увидеть нас с Катей, послушать как мы рассуждаем о судьбах мира и нашей скромной доле, а также увидеть частичку интерьера нашего дома двухмесячной давности. Приятного просмотра!
 
 <iframe src="//www.youtube.com/embed/AYffgd6m_AU" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<!-- READMORE -->

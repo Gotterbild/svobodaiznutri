@@ -8,6 +8,8 @@ categories:
 tags: 
   - "video"
   - "filosofiya"
+coverImage: false
+noReadModeButton: true
 permalink: "gorodskie-istorii-odin-den-v-rostovgrade/"
 ---
 
@@ -16,3 +18,5 @@ permalink: "gorodskie-istorii-odin-den-v-rostovgrade/"
 Если что, эта передача вышла раньше чем передача про нас («Три холма»), которую я выкладывал месяц назад. Но от этого она не становиться менее интересной!
 
 <iframe src="//www.youtube.com/embed/10dYj_nS1Sc" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<!-- READMORE -->

@@ -10,6 +10,8 @@ tags:
   - "video"
   - "otoplenie"
   - "strojka"
+coverImage: false
+noReadModeButton: true
 permalink: "tyaga-nashey-pechki/"
 ---
 
@@ -17,4 +19,6 @@ permalink: "tyaga-nashey-pechki/"
 
 Так что решил пока поделиться с вами небольшим видео про нашу печку, которую буквально сегодня я закончил класть. Дымоход будем ставить только завтра, но это не мешает нам проверить тягу нашей печки!
 
-\[embed\]http://youtu.be/mwJkjZ1g-pQ\[/embed\]
+<iframe width="560" height="315" src="//www.youtube.com/embed/mwJkjZ1g-pQ" frameborder="0" allowfullscreen></iframe>
+
+<!-- READMORE -->
