@@ -1,0 +1,10 @@
+<section id="comments">
+	{%- if comments and comments.length %}
+		<h3 id="comment-title">Комментарии</h3>
+		{%- for comment in comments %}
+			{% include "comment.njk" %}
+		{%- endfor %}
+	{%- endif %}
+
+	{% include "archive-comments-closed.njk" %}
+</section>

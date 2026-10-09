@@ -1,125 +1,47 @@
 # Svobodaiznutri.ru Migration Plan
 
-## 1. Setup and Base Configuration
+## Decisions (2026-10-09)
 
-### 1.1 Create new project structure
-- [ ] Create `content/` directory as main content folder
-- [ ] Create `content/blog/` for posts organized by year
-- [ ] Create `content/blog/2013/`, `2014/`, `2015/`, `2016/` subdirectories
-- [ ] Create `_includes/` directory for templates
-- [ ] Create `_includes/layouts/` for layout templates
-- [ ] Create `_data/` directory for site data
-- [ ] Create `public/` directory for static assets
+- Engine: same as pashadolgopishet — Eleventy 2.x, PDP project structure and config.
+- Design: keep the WordPress design (templates/CSS from `src/`, originally from `_sources/theme/`).
+- Pagination: 7 posts per page, 11 pages, `/page/N/` URLs (as on WordPress). Post URLs `/slug/`.
+- Posts base: the 73 posts in `src/posts/` + the 5 missing published posts from `_sources/md/posts/`
+  (kupolny-dom-svoimi-rukami-i-minimalnymi-sredstvami,
+  novye-vozmozhnosti-i-bolshoy-surpriz, svoboda-iznutri-vozvraschaetsya, new-design-2016) = 77 posts (podderzhat-svobodu-iznutri dropped, see below).
+- The 3 never-published WP posts (novyj-dizajn-bloga, novosti-mobilnaya-versiya, novyj-adres-sajta): keep as drafts, not published.
+- Archive mode (no dynamic features): no comment form, no subscription/contact forms. In place of the comment form:
+  "Сайт заархивирован. Отправка комментариев отключена". Old comments are shown read-only.
+- Site-wide archive banner under the header: "Сайт находится в архиве и больше не обновляется."
+- URLs of all kept posts and pages must stay exactly the same as on WordPress.
+- Pages: keep only `/kniga-kak-realizovyvat-mechty/` — with a direct PDF download instead of the subscription form
+  (PDF to be provided by the user). Same PDF link replaces the form in post `/kak-realizovyvat-mechty-kniga/`.
+  Drop: otpiska, vy-podtverdili-podpisku, kontakty, home, o-nas, podderzhka, spasibo.
+- Drop post `podderzhat-svobodu-iznutri` (donations) → 77 published posts = 11 pages × 7.
+- Remove subscribe calls-to-action sentences from post text (e.g. sohataya-chudo-pech, kak-realizovyvat-mechty-kniga).
+- Third-party: keep Yandex.Metrika counter (remove footer informer badge), keep YouTube embeds,
+  remove VK group widget and the footer VK link.
+- Dec 2013 posts: use the original WordPress dates (Dec 29–30) from `_sources/c.WordPress.2021-05-30.xml`, not the 2021 dates (Dec 22–31).
 
-### 1.2 Update .gitignore
-- [ ] Add `_sources/` to .gitignore
-- [ ] Add `_example/` to .gitignore
-- [ ] Add `node_modules/` if not already present
-- [ ] Add `_site/` if not already present
-- [ ] Add `.cache/` for any caching
+## 1–4. Setup, templates, posts, listing — DONE (2026-10-09)
 
-### 1.3 Update package.json
-- [ ] Update `@11ty/eleventy` to latest 2.x version
-- [ ] Remove `postcss`, `postcss-cli`, `postcss-nested`, `autoprefixer`, `cssnano`
-- [ ] Keep `html-minifier`, `rimraf`, `cross-env`
-- [ ] Update `npm-run-all` to latest
-- [ ] Update all other dependencies to latest compatible versions
-- [ ] Update build scripts to remove postcss steps
-- [ ] Add script for local development server
+- [x] Eleventy 2.0.1 (as PDP), `eleventy.config.js` + `eleventy.config.drafts.js` from PDP. Old `.eleventy.js` is still
+      present, so npm scripts pass `--config=eleventy.config.js` (drop the flag once `src/` and `.eleventy.js` are removed).
+- [x] Dependencies trimmed to eleventy, eleventy-plugin-rss, luxon (postcss toolchain and html-minifier dropped; CSS is plain).
+- [x] Structure: `content/`, `_includes/`, `_data/`, `public/` (static assets, js, css from `src/`).
+- [x] Layouts: `layouts/base.njk` (header, archive banner, sidebar, footer, Yandex.Metrika), `layouts/post.njk`,
+      `layouts/page.njk`; includes `postslist.njk`, `pagination.njk`, `comments.njk`, `archive-comments-closed.njk`.
+- [x] All posts migrated (not only test posts): 77 published + 3 drafts in `content/blog/YYYY/YYYY-MM-DD-slug/YYYY-MM-DD-slug.md`.
+      Images stay in the post's `images/` subfolder (no path rewriting needed); `eleventy.after` hook copies them next to the page.
+- [x] `date` set to the exact WordPress local publish time (fixes same-day ordering; 8 posts were off by one day).
+      Date display matches WP: `dd.mm.yyyy`.
+- [x] `posts` collection = glob `content/blog/**/*.md` (WP tags stay in `tags`, no "posts" tag mixed in).
+- [x] Home + `/page/N/` listing, 7 per page, 11 pages, WP-style page numbers (`< 1 … 4 5 [6] 7 8 … 11 >`);
+      `/page/1/` redirects to `/`. Verified: pages 1–2 match the WP HTML snapshot post-for-post, page 3 nav markup matches.
+- [x] Verified: built post URLs == WP published post URLs (minus dropped `podderzhat-svobodu-iznutri`).
 
-### 1.4 Create eleventy.config.js
-- [ ] Copy base structure from `_example/eleventy.config.js`
-- [ ] Configure input directory as `content/`
-- [ ] Configure includes directory as `../_includes/`
-- [ ] Configure data directory as `../_data/`
-- [ ] Configure output directory as `_site/`
-- [ ] Set `pathPrefix` to `/` for custom domain
-- [ ] Add passthrough copy for images (`content/**/*.{jpg,png,gif,jpeg,pdf,doc}`)
-- [ ] Add passthrough copy for `public/` to root
-- [ ] Add date filters (using existing `date` and `datetime` filters)
-- [ ] Add `postExcerpt` filter from existing `.eleventy.js`
-- [ ] Add `tagLink` and category link filters
-- [ ] Add `i18n` filter
-- [ ] Configure HTML minification for production
-- [ ] Configure BrowserSync 404 page
-
-### 1.5 Copy static assets
-- [ ] Copy `src/static/` contents to `public/`
-- [ ] Copy `src/css/` to `public/css/`
-- [ ] Copy `src/js/` to `public/js/`
-- [ ] Verify favicon and other meta files are present
-
-### 1.6 Copy data files
-- [ ] Copy `src/_data/i18n.js` to `_data/i18n.js`
-- [ ] Create `_data/metadata.js` with site metadata (title, url, description, author)
-
-## 2. Layouts and Templates
-
-### 2.1 Create base layout
-- [ ] Copy `src/_layouts/layout.njk` to `_includes/layouts/base.njk`
-- [ ] Update to work with Eleventy 2.x
-- [ ] Add archive notice after header but before main content
-- [ ] Ensure proper CSS/JS includes
-- [ ] Test that layout renders correctly
-
-### 2.2 Create post layout
-- [ ] Copy `src/_layouts/post.njk` to `_includes/layouts/post.njk`
-- [ ] Set base layout as parent
-- [ ] Keep thumbnail/cover image handling
-- [ ] Keep post metadata (date, tags, categories)
-- [ ] Keep previous/next post navigation
-- [ ] Add placeholder for comments section
-- [ ] Ensure permalink field is respected
-
-### 2.3 Create posts list layout
-- [ ] Copy `src/_layouts/posts.njk` to `_includes/layouts/home.njk`
-- [ ] Implement excerpt display using `postExcerpt` filter
-- [ ] Keep READMORE functionality
-- [ ] Add pagination support
-- [ ] Ensure thumbnail display works
-
-### 2.4 Copy includes
-- [ ] Copy `src/_includes/header.njk` to `_includes/header.njk`
-- [ ] Copy `src/_includes/footer.njk` to `_includes/footer.njk`
-- [ ] Copy `src/_includes/sidebar.njk` to `_includes/sidebar.njk`
-- [ ] Copy any other includes from `src/_includes/`
-- [ ] Update paths in includes to work with new structure
-
-## 3. Test Posts Migration
-
-### 3.1 Select test posts
-- [ ] Choose 1 post from `eko-stroitelstvo` category
-- [ ] Choose 1 post from `eko-proektirovanie` category
-- [ ] Choose 1 post from `eko-otoplenie` category
-- [ ] Choose 1 post from `eko-fundament` category
-- [ ] Choose 1 post from `eko-elektrichestvo` category
-- [ ] Choose 1 post from `eko-myshlenie` category if exists
-
-### 3.2 Migrate test posts structure
-- [ ] For each test post, create folder: `content/blog/YYYY/YYYY-MM-DD-slug/`
-- [ ] Rename `index.md` to `YYYY-MM-DD-slug.md` inside the folder
-- [ ] Copy existing images from `src/posts/YYYY/*/images/` to post folder root
-- [ ] Verify frontmatter has: title, date, categories, tags, coverImage, permalink
-- [ ] Update image paths in markdown from `images/photo.jpg` to `photo.jpg`
-- [ ] Verify READMORE comment is present
-- [ ] Test that posts build correctly
-
-### 3.3 Create blog.11tydata.js
-- [ ] Create `content/blog/blog.11tydata.js`
-- [ ] Set default layout to `layouts/post.njk`
-- [ ] Add posts to `posts` collection
-
-## 4. Articles List Page
-
-### 4.1 Create posts list template
-- [ ] Create `content/index.njk` as home page
-- [ ] Use posts list layout
-- [ ] Configure pagination (10 posts per page)
-- [ ] Display post excerpts using `postExcerpt` filter
-- [ ] Show post thumbnails
-- [ ] Show post metadata (date, categories, tags)
-- [ ] Add pagination navigation
-- [ ] Test navigation between paginated pages
+### Found during 1–4, to handle later
+- ~250 links to `/wp-content/uploads/...` (mostly full-size image links around inline images, a few `<img src>`) — section 10.
+- `/feed/` linked in `<head>` but not built yet — section 12.
 
 ## 5. Single Article Page
 
@@ -145,29 +67,14 @@
 - [ ] Display post titles with links
 - [ ] Style according to existing design
 
-## 6. Comments
+## 6. Comments — DONE (2026-10-09)
 
-### 6.1 Parse comments.xml
-- [ ] Create script `scripts/parse-comments.js`
-- [ ] Parse `_sources/comments.xml`
-- [ ] Extract: author name, date, comment text, parent comment ID
-- [ ] Group comments by post (using post ID or permalink)
-- [ ] Generate `comments.json` file for each post folder
-- [ ] Handle nested/threaded comments structure
-
-### 6.2 Create comments template
-- [ ] Create `_includes/comments.njk`
-- [ ] Check if `comments.json` exists for current post
-- [ ] If exists, render comments with existing HTML/CSS structure
-- [ ] Maintain nesting/threading
-- [ ] Hide "Answer" button
-- [ ] Add archive notice: "Сайт находится в архиве. Комментарии отключены."
-
-### 6.3 Integrate comments into post layout
-- [ ] Include comments template in `_includes/layouts/post.njk`
-- [ ] Test that comments display correctly
-- [ ] Verify nested comments render properly
-- [ ] Test posts without comments show archive notice only
+- [x] `scripts/import_wp_comments.py` reads `_sources/c.WordPress.2021-05-30.xml` (full export; `comments.xml` lacks parent ids)
+      and writes `<post>.11tydata.json` next to each post: 268 approved comments on 48 posts (1 unapproved skipped).
+- [x] WordPress thread order and markup (depth-1..3, `bypostauthor`, `#id` anchor, date), no reply links.
+- [x] "Сайт заархивирован. Отправка комментариев отключена" box under every post (in place of the form).
+- [x] Verified: comment ids and order identical to the WP HTML snapshot on all 73 snapshot posts.
+- [x] Footer VK link removed (user request).
 
 ## 7. Book Page
 

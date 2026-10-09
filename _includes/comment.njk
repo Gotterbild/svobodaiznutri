@@ -1,0 +1,11 @@
+<div class="comment depth-{{ comment.depth }}{% if comment.isPostAuthor %} bypostauthor{% endif %}" id="comment-{{ comment.id }}">
+	<div class="header" role="complementary">
+		<a href="#comment-{{ comment.id }}">#{{ comment.id }}</a>
+		<h4>{{ comment.author }}</h4>
+	</div>
+	<div class="text">
+		<div class="body">{{ comment.content | safe }}</div>
+		<div class="date">{{ comment.date | commentDate }}</div>
+		<div class="clr"></div>
+	</div>
+</div>

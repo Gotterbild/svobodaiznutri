@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content="{{ eleventy.generator }}">
+
+	<link rel="manifest" href="/manifest.json">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+	<meta name="theme-color" content="#978572">
+	<meta name="msapplication-TileColor" content="#978572">
+	<meta name="msapplication-TileImage" content="/images/favicons/ms-icon-114x114.png">
+
+	<title>{% if title %}{{ title }} | {% endif %}{{ metadata.title }}</title>
+
+	<link rel="stylesheet" href="/reset.css">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/media.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700%7CUbuntu+Condensed&subset=latin,cyrillic" rel="stylesheet">
+
+	{% include "seo.njk" %}
+
+	<meta name="yandex-verification" content="54f2d7ee5a4d2b80" /> {# yandex webmaster #}
+	<meta name="yandex-verification" content="781b402150e6d49b" /> {# yandex metrika #}
+</head>
+<body>
+
+	{% include "header.njk" %}
+
+	<main id="blog" class="page">
+		<div class="grid">
+			<div class="archive-notice" role="note">{{ metadata.archiveNotice }}</div>
+
+			<section id="content" class="blog post">
+				{{ content | safe }}
+			</section>
+
+			{% include "sidebar.njk" %}
+		</div><!-- grid -->
+	</main>
+
+	{% include "footer.njk" %}
+
+	<script src="/js/script.js"></script>
+	{% include "yandex-metrika.njk" %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+---
+title: "Строим дом из мешков: видео!"
+date: "2014-05-02T19:33:12"
+categories: 
+  - "eko-stroitelstvo"
+tags: 
+  - "video"
+  - "strojka"
+coverImage: false
+noReadModeButton: true
+permalink: "/stroim-iz-meshkov-video/"
+---
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/iaFg_7qYzzI" frameborder="0" allowfullscreen></iframe>

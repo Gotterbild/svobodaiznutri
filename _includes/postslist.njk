@@ -1,0 +1,30 @@
+{%- for post in postslist %}
+	<article>
+		<div
+			{% if post.data.coverImage === false %}
+			class="thumb no-image"
+			{% else %}
+			class="thumb"
+			style="background-image: url('{% if post.data.coverImage %}{{ post.url }}images/{{ post.data.coverImage }}{% else %}/images/default.png{% endif %}')"
+			{% endif %}
+		>
+			<a href="{{ post.url }}" class="link"></a>
+			<header>
+				<h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+				<div class="meta">
+					<time class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+					<span class="divider"></span>
+					{% for tag in post.data.tags -%}
+						<a class="tag" href="{{ tag | tagLink }}">{{ tag | i18n }}</a>{% if not loop.last %},{% endif %}
+					{% endfor %}
+				</div>
+			</header>
+		</div>
+		<div class="text">
+			{{ post.templateContent | postExcerpt | safe }}
+			{% if not post.data.noReadModeButton %}
+				<a class="readmore" href="{{ post.url }}">Читать далее</a>
+			{% endif %}
+		</div>
+	</article>
+{%- endfor %}

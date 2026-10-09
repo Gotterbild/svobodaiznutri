@@ -1,0 +1,26 @@
+{%- set seoDescription = description or metadata.description %}
+{%- set seoImage = metadata.url + ((page.url + "images/" + coverImage) if coverImage else "/images/default.png") %}
+{%- set seoKeywords = keywords or metadata.keywords %}
+<meta name="description" content="{{ seoDescription }}">
+<link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+<link rel="alternate" href="/feed/" type="application/rss+xml" title="{{ metadata.title }}">
+
+<meta property="og:site_name" content="{{ metadata.title }}">
+<meta property="og:type" content="{{ 'article' if layout == 'layouts/post.njk' else 'website' }}">
+<meta property="og:title" content="{{ title or metadata.title }}">
+<meta property="og:description" content="{{ seoDescription }}">
+<meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+<meta property="og:image" content="{{ seoImage }}">
+
+<meta name="keywords" content="{{ seoKeywords | join(',') }}">
+{%- if layout == "layouts/post.njk" %}
+<meta property="article:published_time" content="{{ page.date | htmlDateString }}">
+{%- for item in tags %}
+<meta property="article:tag" content="{{ item | i18n }}">
+{%- endfor %}
+{%- endif %}
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ title or metadata.title }}">
+<meta name="twitter:description" content="{{ seoDescription }}">
+<meta name="twitter:image" content="{{ seoImage }}">

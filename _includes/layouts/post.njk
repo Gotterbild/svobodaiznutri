@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+---
+{%- set postImage = (page.url + "images/" + coverImage) if coverImage else "/images/default.png" %}
+<article>
+	<div
+		{% if coverImage === false %}
+		class="thumb no-image"
+		{% else %}
+		class="thumb"
+		style="background-image: url('{{ postImage }}')"
+		{% endif %}
+	>
+		<header id="post">
+			<h1>{{ title }}</h1>
+			<div class="meta">
+				<time class="date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+				{%- if tags %}
+					<span class="divider"></span>
+					{% for tag in tags -%}
+						<a class="tag" href="{{ tag | tagLink }}">{{ tag | i18n }}</a>{% if not loop.last %},{% endif %}
+					{% endfor %}
+				{%- endif %}
+			</div>
+		</header>
+	</div>
+
+	<div class="text">
+		{{ content | safe }}
+
+		{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+		{%- if previousPost %}
+			<a href="{{ previousPost.url }}" class="prev">
+				<div>Предыдущая статья</div>
+				<span>«{{ previousPost.data.title }}»</span>
+			</a>
+		{%- endif %}
+
+		{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+		{%- if nextPost %}
+			<a href="{{ nextPost.url }}" class="next">
+				<div>Следующая статья</div>
+				<span>«{{ nextPost.data.title }}»</span>
+			</a>
+		{%- endif %}
+	</div>
+</article>
+
+{% include "comments.njk" %}

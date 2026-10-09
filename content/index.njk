@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.posts
+  size: 7
+  reverse: true
+  alias: postslist
+permalink: "{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber + 1 }}/{% else %}/{% endif %}"
+eleventyExcludeFromCollections: true
+---
+<h1 class="hid-h1">{{ metadata.title }}</h1>
+
+{% include "postslist.njk" %}
+
+{% include "pagination.njk" %}
