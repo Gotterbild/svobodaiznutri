@@ -42,6 +42,10 @@
 ### Found during 1–4, to handle later
 - ~250 links to `/wp-content/uploads/...` (mostly full-size image links around inline images, a few `<img src>`) — section 10.
 - `/feed/` linked in `<head>` but not built yet — section 12.
+- Missing image files referenced by posts (thumbnail sizes like `-300x225.jpg` never exported):
+  `pro-jizn-na-dereve` (14), `oshibki-nachinayuschih-ekostroitelei-1` (4), `idealniy-razmer-doma` (1),
+  `pochemu-ya-pereehal-iz-goroda-na-zemlu` (1) — look in `_sources/html/wp-content/` (section 10).
+- Broken external link `detail.tmall.com/...` without `https://` in `elektrifikaciya-ekodoma`.
 
 ## 5. Single Article Page
 
@@ -88,26 +92,20 @@
 - [ ] Test that page renders correctly
 - [ ] Verify permalink works
 
-## 8. Categories
+## 8–9. Categories and tags — DONE (2026-10-09)
 
-### 8.1 Create individual category pages
-- [ ] Create `content/category.njk` with pagination
-- [ ] Generate page for each category
-- [ ] Set permalink pattern to `/category/{category-slug}/`
-- [ ] Display all posts in category
-- [ ] Use posts list template/include
-- [ ] Show category name using `i18n` filter
+- [x] `/category/<slug>/` and `/tag/<slug>/` with `/page/N/`, 7 per page, same pager as home
+      (collections `categoryPages`/`tagPages` in `eleventy.config.js`, templates `content/category.njk`, `content/tag.njk`).
+- [x] Category names/descriptions from WP export in `_data/categoryInfo.js` (incl. `news`, not in the menu).
+- [x] Verified against WP snapshot: all category and tag listing pages identical post-for-post.
+      Not rebuilt on purpose: `/tag/novosti/page/2/` (only held the dropped donation post), `/tag/s/` (typo tag removed in 2021).
 
-## 9. Tags
-
-### 9.1 Create individual tag pages
-- [ ] Create `content/tag.njk` with pagination
-- [ ] Generate page for each tag
-- [ ] Set permalink pattern to `/tag/{tag-slug}/`
-- [ ] Display all posts with tag
-- [ ] Use posts list template/include
-- [ ] Show tag name using `i18n` filter
-
+### Header and VK (user requests, 2026-10-09)
+- [x] Header: no inline menu; burger button at all widths, menu (all items) in the dropdown.
+- [x] All mentions of VK groups removed: footer link, VK bullet in `/new-design-2016/`,
+      music group line in `/zdravstvuite-dorogie-chitateli/`, comments 9443/9445/9446 on `/fire/` (see `EXCLUDED_COMMENTS`).
+      Kept: links to third-party VK pages (`/kupolny-dom-…/`, `/planirovka-3-nash-metod/` + one comment there),
+      and "вКонтакте" mentions in `/pochemu-ya-pereehal-iz-goroda-na-zemlu/` (author's wall/feed, not a group). Email kept.
 
 ## 10. Full Posts Migration
 

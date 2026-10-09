@@ -9,6 +9,7 @@ const pluginDrafts = require("./eleventy.config.drafts.js");
 const i18n = require("./_data/i18n.js");
 
 const POSTS_GLOB = "content/blog/**/*.md";
+const POSTS_PER_PAGE = 7;
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = function(eleventyConfig) {
@@ -35,6 +36,14 @@ module.exports = function(eleventyConfig) {
 	// Collections
 	eleventyConfig.addCollection("posts", collectionApi => {
 		return collectionApi.getFilteredByGlob(POSTS_GLOB);
+	});
+
+	// One item per listing page of each category / tag, for `/category/<slug>/page/N/` style URLs
+	eleventyConfig.addCollection("categoryPages", collectionApi => {
+		return termPages(collectionApi.getFilteredByGlob(POSTS_GLOB), "categories", "/category/");
+	});
+	eleventyConfig.addCollection("tagPages", collectionApi => {
+		return termPages(collectionApi.getFilteredByGlob(POSTS_GLOB), "tags", "/tag/");
 	});
 
 	// Filters
@@ -112,6 +121,32 @@ module.exports = function(eleventyConfig) {
 		pathPrefix: "/",
 	};
 };
+
+// Splits posts by term (category or tag) into listing pages of POSTS_PER_PAGE, newest first
+function termPages(posts, dataKey, baseUrl) {
+	const byTerm = new Map();
+	for (const post of [...posts].reverse()) {
+		for (const term of post.data[dataKey] || []) {
+			if (!byTerm.has(term)) byTerm.set(term, []);
+			byTerm.get(term).push(post);
+		}
+	}
+
+	const pages = [];
+	for (const [term, termPosts] of byTerm) {
+		const total = Math.ceil(termPosts.length / POSTS_PER_PAGE);
+		const hrefs = Array.from({ length: total }, (_, i) => `${baseUrl}${term}/${i ? `page/${i + 1}/` : ""}`);
+		for (let i = 0; i < total; i++) {
+			pages.push({
+				term,
+				url: hrefs[i],
+				posts: termPosts.slice(i * POSTS_PER_PAGE, (i + 1) * POSTS_PER_PAGE),
+				pager: { pageNumber: i, hrefs, previous: hrefs[i - 1], next: hrefs[i + 1] },
+			});
+		}
+	}
+	return pages;
+}
 
 function copyPageAssets({ dir, results }) {
 	for (const { inputPath, outputPath } of results) {

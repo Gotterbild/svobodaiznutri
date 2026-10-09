@@ -1,21 +1,22 @@
-{#- WordPress-like page numbers: < 1 … 4 5 [6] 7 8 … 11 > -#}
-{%- if pagination.pages.length > 1 %}
+{#- WordPress-like page numbers: < 1 … 4 5 [6] 7 8 … 11 >
+    Expects `pager`: { pageNumber (0-based), hrefs, previous, next } -#}
+{%- if pager.hrefs.length > 1 %}
 	<div id="nav-below">
 		<nav id="post_nav" aria-label="Страницы">
-			{%- if pagination.href.previous %}
-				<a class="prev page-numbers" href="{{ pagination.href.previous }}" aria-label="Предыдущая страница">&lt;</a>
+			{%- if pager.previous %}
+				<a class="prev page-numbers" href="{{ pager.previous }}" aria-label="Предыдущая страница">&lt;</a>
 			{%- endif %}
-			{%- for n in pagination.pageNumber | paginationItems(pagination.pages.length) %}
+			{%- for n in pager.pageNumber | paginationItems(pager.hrefs.length) %}
 				{%- if n == "…" %}
 					<span class="page-numbers dots">&hellip;</span>
-				{%- elif n == pagination.pageNumber + 1 %}
+				{%- elif n == pager.pageNumber + 1 %}
 					<span class="page-numbers current" aria-current="page">{{ n }}</span>
 				{%- else %}
-					<a class="page-numbers" href="{{ pagination.hrefs[n - 1] }}">{{ n }}</a>
+					<a class="page-numbers" href="{{ pager.hrefs[n - 1] }}">{{ n }}</a>
 				{%- endif %}
 			{%- endfor %}
-			{%- if pagination.href.next %}
-				<a class="next page-numbers" href="{{ pagination.href.next }}" aria-label="Следующая страница">&gt;</a>
+			{%- if pager.next %}
+				<a class="next page-numbers" href="{{ pager.next }}" aria-label="Следующая страница">&gt;</a>
 			{%- endif %}
 		</nav>
 	</div>

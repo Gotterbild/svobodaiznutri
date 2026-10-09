@@ -12,4 +12,5 @@ eleventyExcludeFromCollections: true
 
 {% include "postslist.njk" %}
 
+{%- set pager = { pageNumber: pagination.pageNumber, hrefs: pagination.hrefs, previous: pagination.href.previous, next: pagination.href.next } %}
 {% include "pagination.njk" %}

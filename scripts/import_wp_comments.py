@@ -15,6 +15,9 @@ ROOT = Path(__file__).resolve().parent.parent
 EXPORT = ROOT / "_sources/c.WordPress.2021-05-30.xml"
 NS = {"wp": "http://wordpress.org/export/1.2/"}
 
+# Not archived: question about social networks on /fire/ and the answers pointing to the (closed) VK group
+EXCLUDED_COMMENTS = {9443, 9445, 9446}
+
 
 def text(el, tag):
     found = el.find(f"wp:{tag}", NS)
@@ -58,6 +61,8 @@ def main():
         comments = []
         for c in item.findall("wp:comment", NS):
             if text(c, "comment_approved") != "1" or text(c, "comment_type") not in ("", "comment"):
+                continue
+            if int(text(c, "comment_id")) in EXCLUDED_COMMENTS:
                 continue
             comments.append({
                 "id": int(text(c, "comment_id")),

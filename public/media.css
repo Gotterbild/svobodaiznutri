@@ -59,11 +59,6 @@
 @media ( min-width: 1024px ) {
 
 	.grid { width: 100%; }
-	#header .menu {
-		display: flex;
-		font-size: 1.25rem;
-	}
-	#header .burger { display: none }
 	.top-widget.widget_wysija, .top-widget { width: 100%; }
 	.widget_wysija .text { line-height: 1.25em; padding-bottom: 0; }
 	.widget_wysija .left {float: left; max-width: 73% }

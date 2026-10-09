@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.tagPages
+  size: 1
+  alias: termPage
+permalink: "{{ termPage.url }}"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "{{ termPage.term | i18n }}"
+---
+<h1 class="hid-h1">{{ title }}</h1>
+
+{%- set postslist = termPage.posts %}
+{% include "postslist.njk" %}
+
+{%- set pager = termPage.pager %}
+{% include "pagination.njk" %}
