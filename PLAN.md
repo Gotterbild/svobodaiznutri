@@ -2,6 +2,9 @@
 
 ## Decisions (2026-10-09)
 
+- Domain: the archive is published at **svobodaiznutri.com** (not .ru); `.ru` will redirect to `.com` (later, see 15).
+  Links in comments to the .ru domain are rewritten to .com. The contact email will be replaced by a new one (see 15).
+
 - Engine: same as pashadolgopishet — Eleventy 2.x, PDP project structure and config.
 - Design: keep the WordPress design (templates/CSS from `src/`, originally from `_sources/theme/`).
 - Pagination: 7 posts per page, 11 pages, `/page/N/` URLs (as on WordPress). Post URLs `/slug/`.
@@ -132,37 +135,21 @@
       mirodolie.ru (×2), sandbaghouse.com, ecology.md, stroiteli.info, goandsee.ru, maps.rosreestr.ru,
       7 unavailable YouTube videos; in comments (via `scripts/import_wp_comments.py`): mirtesen link unlinked,
       `/page/14/` → `/page/11/`.
-- [ ] Kept, uncertain: mirtv.ru (403 to bots), ozzyzello.livejournal.com (redirects to login).
+- [ ] Kept, uncertain: mirtv.ru homepage (403 to bots), ozzyzello.livejournal.com (redirects to login).
 - [x] 4 posts whose embedded YouTube video became private are hidden (`draft: true`, user decision):
       `/stroim-iz-meshkov-video/`, `/tyaga-nashey-pechki/`, `/gorodskie-istorii-tri-holma/`,
       `/gorodskie-istorii-odin-den-v-rostovgrade/`. No other page links to them. Site: 73 posts, 11 pages.
-- mirtv.ru: not the only content of any article (`/kosmicheskie-korabli-…/`, `/zachem-ya-zakruglil-svoy-dom/` addendum) — kept.
+- mirtv.ru: not the only content of any article. Dead programme link: "Дополнение 10.06.2014" paragraph removed from
+  `/zachem-ya-zakruglil-svoy-dom/` (user confirmed). Channel homepage link in `/kosmicheskie-korabli-…/` kept.
 
-## 11. URL Verification
+## 11. URL Verification — DONE (2026-10-09)
 
-### 11.1 Verify article URLs
-- [ ] Build site and generate list of all article URLs
-- [ ] Compare with original WordPress URLs from `_sources/c.WordPress.2021-05-30.xml`
-- [ ] Ensure permalinks match exactly
-- [ ] Check that pagination URLs can differ (acceptable)
-- [ ] Fix any mismatches
-
-### 11.2 Verify page URLs
-- [ ] Build site and generate list of all page URLs
-- [ ] Compare with original WordPress page URLs
-- [ ] Ensure book page URL matches original
-- [ ] Fix any mismatches
-
-### 11.3 Verify category and tag URLs
-- [ ] Verify category URLs match `/category/{slug}/` pattern
-- [ ] Verify tag URLs match `/tag/{slug}/` pattern
-- [ ] Test that all category/tag links work
-
-### 11.4 Test internal links
-- [ ] Scan all markdown content for internal links
-- [ ] Verify links point to correct URLs
-- [ ] Update any broken internal links
-- [ ] Test navigation between posts
+- [x] Every WordPress URL checked against the build (posts, pages, categories, tags, listing pages, feed):
+      73 posts, book page, 21 category/tag pages, 29 listing pages and `/feed/` exist at the same URLs.
+- [x] Missing on purpose (decisions above): 7 dropped pages, `podderzhat-svobodu-iznutri`, 4 hidden video posts,
+      `/tag/s/`, `/tag/novosti/page/2/`, `/page/12/`, and the last listing page of `eko-myshlenie` (p.3),
+      `eko-stroitelstvo` (p.10), `budni` (p.4), `otoplenie` tag (p.3) — fewer posts now; listing page numbers may differ.
+- [x] Internal links: no broken internal links/images in the built site; absolute self-links only in comments (valid).
 
 ## 12. RSS Feed — DONE (2026-10-09)
 
@@ -170,84 +157,41 @@
       same feed also at `/feed/index.html` so the old WordPress URL `/feed/` keeps working on GitHub Pages.
 - [x] `<link rel="alternate">` in `<head>`. No JSON feed (not needed for an archive).
 
-## 13. Additional Features
+## 13. Additional Features — DONE (2026-10-09)
 
-### 13.1 Create 404 page — DONE
-- [x] `content/404.md` (GitHub Pages serves `/404.html` automatically)
+- [x] 404 page (`content/404.md`), sitemap + robots.txt.
+- [x] Archive banner on every page (61 listing pages, 73 posts, book, 404); comments-closed notice on every post.
 
-### 13.2 Add sitemap — DONE (2026-10-09)
-- [x] `/sitemap.xml`: home + all posts (+ pages once added); no drafts, listing or category/tag pages
-- [x] `Sitemap:` line in `robots.txt`
+## 14. Testing and Verification — DONE (2026-10-09)
 
-### 13.3 Verify archive notice
-- [ ] Check that archive notice appears after header on all pages
-- [ ] Verify notice appears in comments section
-- [ ] Ensure text is in Russian
-- [ ] Test on different page types (post, page, list)
+- [x] Clean build, no errors/warnings; simulated CI checkout (without gitignored `_sources/`) → `npm ci` + build
+      produces an identical `_site`.
+- [x] Phone width (375px) checked for home, post with gallery, book page; desktop compared with the live WP site.
+- [x] Works without JavaScript: `<noscript>` shows the menu expanded (burger needs JS); images and galleries visible.
+- [x] Post images get `loading="lazy"`; heaviest page ≈2.6 MB of images; gallery/full-size originals load only on click.
 
-## 14. Testing and Verification
+## 15. Go-live — READY, scheduled by the user for another day
 
-### 14.1 Build verification
-- [ ] Run `npm run build` successfully
-- [ ] Check for build errors or warnings
-- [ ] Verify all posts generated
-- [ ] Verify all pages generated
-- [ ] Check category and tag pages generated
+Prepared:
+- [x] Workflow `.github/workflows/build.yml` (Node from `.nvmrc`, `npm ci`, `npm run build-ghpages`, publish `_site`
+      to `gh-pages` on push to `master`), `content/CNAME` = `svobodaiznutri.com`.
+- [x] Site URL `.com` everywhere it matters (canonical, Open Graph, feed, sitemap, robots.txt, comment links).
 
-### 14.2 Content verification
-- [ ] Manually check several posts from each year
-- [ ] Verify formatting is correct
-- [ ] Test that images display
-- [ ] Check that comments appear
-- [ ] Verify metadata is correct
-
-### 14.3 Navigation verification
-- [ ] Test navigation between posts
-- [ ] Test category navigation
-- [ ] Test tag navigation
-- [ ] Test pagination
-- [ ] Test all links in sidebar
-- [ ] Test header and footer links
-
-### 14.4 Style verification
-- [ ] Compare rendered site with HTML export
-- [ ] Verify CSS is applied correctly
-- [ ] Check responsive design
-- [ ] Test on different browsers
-- [ ] Verify fonts and images load
-
-### 14.5 Performance check
-- [ ] Check build time is reasonable
-- [ ] Verify page load times
-- [ ] Check image sizes are acceptable
-- [ ] Test site works without JavaScript
-
-## 15. GitHub Pages Deployment
-
-### 15.1 Create GitHub Actions workflow
-- [ ] Copy `_example/.github/workflows/gh-pages.yml`
-- [ ] Update to use latest Node.js version
-- [ ] Update build command to `npm run build`
-- [ ] Set correct publish directory as `_site`
-- [ ] Configure to run on push to main/master branch
-
-### 15.2 Create CNAME file
-- [ ] Create `content/CNAME` with `svobodaiznutri.ru`
-- [ ] Add passthrough copy for CNAME in config
-
-### 15.3 Test deployment
-- [ ] Push to GitHub
-- [ ] Verify GitHub Actions workflow runs
-- [ ] Check that site builds successfully
-- [ ] Verify site is published to gh-pages branch
-- [ ] Test site at GitHub Pages URL
-- [ ] Configure custom domain in GitHub repository settings
-
-### 15.4 DNS configuration
-- [ ] Verify DNS points to GitHub Pages
-- [ ] Test that https://svobodaiznutri.ru loads correctly
-- [ ] Enable HTTPS in GitHub Pages settings
-- [ ] Test all URLs work with custom domain
+To do (user):
+- [ ] Push to `master`, check the Actions run is green (it creates the `gh-pages` branch).
+- [ ] Enable GitHub Pages on the repo (not enabled yet): Settings → Pages → source = branch `gh-pages`, `/ (root)`;
+      custom domain `svobodaiznutri.com`; Enforce HTTPS once the certificate is issued.
+- [ ] DNS for `svobodaiznutri.com`: A records 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153;
+      `www` CNAME → `gotterbild.github.io`. (The preview URL `gotterbild.github.io/svobodaiznutri/` won't render
+      correctly — root-absolute paths — check locally with `npm start` instead.)
+- [ ] Check on `https://svobodaiznutri.com`: a few posts, `/feed/`, `/kniga-kak-realizovyvat-mechty/` and its PDF, 404 page.
+- [ ] Redirect `svobodaiznutri.ru` → `svobodaiznutri.com` (permanent 301, keeping the path, e.g. registrar URL forwarding).
+      All post URLs are unchanged, so old links, search results, `/feed/` subscriptions and the book PDF link in old
+      subscriber emails (`/wp-content/uploads/Павел-Долгов.-Как-реализовывать-мечты.pdf`) keep working through it.
+- [ ] New contact email (to be chosen): replace `paveldolgov@svobodaiznutri.ru` in `/new-design-2016/`
+      (`content/blog/2016/2016-03-06-new-design-2016/`) — the only place it appears on the site.
+- Note: a reader's email (`el.grineva@yandex.ru`) is in one of the comments, as it was on WordPress; remove if preferred.
+- Note: GitHub Pages serves `/feed/` as `text/html` (the content is Atom XML); feed readers handle it.
 
 ## 16. Cleanup — POSTPONED (do after the site is live and verified)
 
@@ -258,11 +202,10 @@
 - [ ] `.gitignore`: drop the `_example/` line (folder already removed)
 - [ ] `PLAN.md` — once everything is done (or move the "Decisions" part into README)
 
-### 16.2 Code leftovers
-- [ ] `public/style.css`, `public/media.css`: unused WordPress-era rules (`.widget_wysija*` subscription form,
-      `.related_posts_by_taxonomy`, `.comment-respond` form inputs, `.top-widget`)
-- [ ] `public/js/script.js`: commented-out jQuery code (SVG inlining, fancybox, wysija)
-- [ ] `_includes/widget-popular-posts.njk` uses old WP plugin class names — fine to keep, just noting
+### 16.2 Code leftovers — DONE (2026-10-09)
+- [x] Unused WordPress-era CSS removed (subscription form, related posts, share widget, comment form inputs):
+      50 selectors; screenshots of 6 pages (desktop + phone) pixel-identical before/after.
+- [x] Commented-out jQuery code removed from `public/js/script.js`.
 
 ### 16.3 Outside the repo / not committed
 - [ ] `../svobodaiznutri.ru_2/` (wp_to_md_converter + temp) — the export is done, the result is in `_sources/md`
@@ -270,5 +213,5 @@
 - [ ] `_sources/comments.xml` — subset of `c.WordPress.2021-05-30.xml`, not used by any script
 - Keep: `_sources/c.WordPress.2021-05-30.xml` and `_sources/html/` (used by `scripts/import_wp_comments.py` and as image source)
 
-### 16.4 Documentation
-- [ ] Rewrite README.md (current one is the 2021 TODO list): structure, `npm start` / `npm run build`, deploy, archive status
+### 16.4 Documentation — DONE (2026-10-09)
+- [x] README.md rewritten: commands, deploy, structure, where decisions live.

@@ -21,7 +21,10 @@ EXCLUDED_COMMENTS = {9443, 9445, 9446}
 # Links in comments that no longer work
 LINK_REWRITES = {
     # "the beginning of the blog" is now the last page of the listing
-    "http://svobodaiznutri.ru/page/14/": "https://svobodaiznutri.ru/page/11/",
+    "http://svobodaiznutri.ru/page/14/": "https://svobodaiznutri.com/page/11/",
+    # the archive lives on the .com domain
+    "http://svobodaiznutri.ru/": "https://svobodaiznutri.com/",
+    "https://svobodaiznutri.ru/": "https://svobodaiznutri.com/",
 }
 DEAD_LINKS = {
     "http://kvartira.mirtesen.ru/blog/43373507125/Kak-v-SHveytsarii-200-letniy-saray-prevratili-v-uyutnyiy-3-etazh",

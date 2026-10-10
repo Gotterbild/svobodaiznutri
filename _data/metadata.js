@@ -1,11 +1,11 @@
 module.exports = {
   lastYear: 2021,
-  url: 'https://svobodaiznutri.ru',
+  url: 'https://svobodaiznutri.com',
   language: 'ru',
   author: { name: 'Павел Долгов' },
   archiveNotice: 'Сайт находится в архиве и больше не обновляется.',
   commentsClosedNotice: 'Сайт заархивирован. Отправка комментариев отключена',
-  domain: 'svobodaiznutri.ru',
+  domain: 'svobodaiznutri.com',
   title: 'Свобода Изнутри',
   slogan: 'Экология мышления - гармония жизни',
   description: 'Как построить дом всего за 100 тысяч рублей? Строим дом из мешков своими руками. Ошибки при создании экопоселения.',
