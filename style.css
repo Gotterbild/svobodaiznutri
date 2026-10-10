@@ -85,11 +85,9 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 .wood { background: url('images/wood-transparent.png') center center repeat #98816A; }
 .darkwood { background: url('images/wood-dark.png') center center repeat #181310; }
 
-
 /* Shadows *********************************************************************** */
 
 #header,
-.top-widget,
 .page .blog article,
 #comments h3,
 #comments .comment,
@@ -97,7 +95,6 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 .page .sidebar article,
 #nav-below a { box-shadow: 0 0.25rem 1rem rgba(24, 19, 16, 0.25); }
 #header:hover,
-.top-widget:hover,
 .page .blog article:hover,
 #comments h3:hover,
 #comments .comment:hover,
@@ -237,49 +234,6 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 				background: url('images/wood-dark.png') center top repeat #181310;
 				color: #fff;
 			}
-.top-widget {
-	padding: 0.5rem;
-	background: url('images/wood-transparent.png') center center repeat #98816A;
-}
-	.widget_wysija_cont {
-		padding: 1rem;
-		background: url('images/wood-transparent.png') center center repeat #f2f2f2;
-		color: #181310;
-	}
-		.widget_wysija h2 {
-			font-size: 1.5em;
-			margin: 0 0 0.5rem;
-			line-height: 1em;
-		}
-		.widget_wysija .text { line-height: 1.25em; padding-bottom: 1em; }
-		.wysija-paragraph { position: relative; }
-		.widget_wysija label {
-			position: absolute;
-			color: #98816A;
-			font-family: "Ubuntu Condensed", sans-serif;
-			left: 50%;
-			width: 100%;
-			margin-left: -35%;
-			margin-top: 0.5em;
-			pointer-events: none;
-		}
-		#form-wysija-2 label { display:  none; }
-		.widget_wysija input { text-align: center; outline: none; border: 2px solid #98816A; }
-		.widget_wysija input:focus { outline: none;  }
-		.widget_wysija input[type=submit] {
-			background: url('images/wood-transparent.png') center center repeat #98816A;
-			text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25);
-			box-shadow: 0 0.25rem 0.5rem rgba(24, 19, 16, 0.5);
-			cursor: pointer;
-			border: none;
-			color: #fff;
-			text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-		}
-		.widget_wysija input[type=submit]:hover { box-shadow: 0 0.5rem 1rem rgba(24, 19, 16, 0.5); }
-		.widget_wysija input[type=submit]:active {
-			border: none;
-			box-shadow: 0 0.5rem 1rem rgba(24, 19, 16, 0.5) inset;
-		}
 .page .blog article {
 	margin: 1rem 0 2rem;
 	background-color: #fff;
@@ -327,10 +281,8 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 	.page .blog article .text { padding: 1rem; overflow-x: hidden; }
 		.page .blog article .text h2 { font-size: 2em; text-align: center; }
 		.page .blog article .text .readmore,
-		.page .blog article .text .prev,
-		.page .blog article .text .next,
-		.comment .comment-reply-link,
-		.comment-respond input[type="submit"] {
+.page .blog article .text .prev,
+.page .blog article .text .next {
 			background: url('images/wood-transparent.png') center center repeat #98816A;
 			color: #fff;
 			text-shadow: 0 -1px 1px rgba(24, 19, 16, 0.5);
@@ -343,15 +295,11 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 			cursor: pointer;
 		}
 		.page .blog article .text .readmore:hover,
-		.page .blog article .text .prev,
-		.page .blog article .text .next,
-		.comment .comment-reply-link:hover,
-		.comment-respond input[type="submit"]:hover {
+.page .blog article .text .prev,
+.page .blog article .text .next {
 			box-shadow: 0 0.25rem 0.5rem rgba(24, 19, 16, 0.25), 0.25rem 0 0.5rem -0.25rem rgba(255, 255, 255, 0.25) inset;
 			text-decoration: none;
 		}
-		.podelis	{ margin: 0 auto; display: table; text-align: center; }
-		.podelis img { width: 100%; }
 		.page .blog article .text .prev,
 		.page .blog article .text .next { margin-top: 1rem; margin-bottom: 1rem; width: 90%; padding-top: 0.5em; }
 		.page .blog article .text .prev { float: left; }
@@ -413,17 +361,11 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 		.comment.bypostauthor .header { color: #181310; }
 			.comment.bypostauthor .header a { color: #fff }
 	.comment .text { padding: 1rem;	}
-		.comment .comment-reply-link {
-			float: left;
-			font-size: 1em;
-			margin-top: 1rem;
-		}
 		.comment .date {
 			float: right;
 			font-family: 'Ubuntu Condensed', sans-serif;
 			color: #CBCBCB;
 		}
-.comment-respond form { padding-bottom: 1px; }
 	.comment-respond h3 {
 		background: url("images/wood-transparent.png") repeat scroll top right #98816A !important;
 		padding: 1rem !important;
@@ -432,47 +374,7 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 		color: #fff !important;
 		text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 	}
-		.comment-respond h3 a { color: #fff; text-decoration: underline; }
-	.comment-respond textarea {
-		border: medium none;
-		outline: medium none;
-		box-shadow: none;
-		width: 100%;
-		min-height: 8em;
-		margin-bottom: 0;
-	}
-	.comment-respond .footer {
-		padding: 1rem;
-		background: url("images/wood-transparent.png") repeat scroll center center #f2f2f2;
-	}
-		.comment-respond .input {
-			border-top: 2px solid #f2f2f2;
-			border-bottom: 2px solid #f2f2f2;
-			border-right: 2px solid #f2f2f2;
-			border-left: 2px solid #fff;
-			outline: medium none;
-			box-shadow: none;
-			text-align: left;
-			display: table;
-			width: 50%;
-			float: left;
-			margin-bottom: 0;
-		}
-		.comment-respond .input:focus {border: 2px solid #98816A;}
-		.comment-respond input[type='submit'] {
-			border:none;
-			outline: none;
-			box-shadow: none;
-			display: table;
-			float: left;margin-top: 1rem;
-			margin-right: 0;
-			margin-left: 0;
-			margin-top: 0;
-			font-size: 1em;
-		}
 		.comment-form-subscriptions { margin-top: 1rem; }
-		.comment-respond .subscribe-to-comments {	display: table; }
-			.comment-respond .subscribe-to-comments label { display: table-cell; vertical-align: middle; }
 		.comment-form-subscriptions input {	width: auto !important; float: left;}
 
 .page .sidebar article {
@@ -510,11 +412,6 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 			font-family: 'Ubuntu Condensed', sans-serif;
 			margin-left: 1em;
 		}
-.related_posts_by_taxonomy .main	{ padding: 0 0 1rem !important; }
-	.related_posts_by_taxonomy .gallery { margin: 0 -1rem; }
-		.related_posts_by_taxonomy .gallery-item { margin-top: 0 !important; width: 33.33% !important }
-			.related_posts_by_taxonomy	img { border:none !important; height: auto !important; }
-			.related_posts_by_taxonomy	dd { font-family: 'Ubuntu Condensed', sans-serif; font-size: 0.75em; line-height: 1.25; padding: 0 0.5em; }
 
 #nav-below {display: table; margin: 3rem auto;}
 #nav-below a, #nav-below span:not(.dots) {
