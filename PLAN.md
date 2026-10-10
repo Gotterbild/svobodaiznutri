@@ -12,6 +12,7 @@
   (kupolny-dom-svoimi-rukami-i-minimalnymi-sredstvami,
   novye-vozmozhnosti-i-bolshoy-surpriz, svoboda-iznutri-vozvraschaetsya, new-design-2016) = 77 posts (podderzhat-svobodu-iznutri dropped, see below).
 - The 3 never-published WP posts (novyj-dizajn-bloga, novosti-mobilnaya-versiya, novyj-adres-sajta): keep as drafts, not published.
+  `novyj-adres-sajta` (about the old свободаизнутри.рф address) later deleted (user decision, 2026-10-10).
 - Archive mode (no dynamic features): no comment form, no subscription/contact forms. In place of the comment form:
   "Сайт заархивирован. Отправка комментариев отключена". Old comments are shown read-only.
 - Site-wide archive banner under the header: "Сайт находится в архиве и больше не обновляется."
@@ -151,6 +152,7 @@
       `eko-stroitelstvo` (p.10), `budni` (p.4), `otoplenie` tag (p.3) — fewer posts now; listing page numbers may differ.
 - [x] Internal links: no broken internal links/images in the built site; absolute self-links only in comments (valid).
 
+
 ## 12. RSS Feed — DONE (2026-10-09)
 
 - [x] Atom feed (as PDP) with all 77 posts, full content, absolute URLs: `/feed/feed.xml`,
@@ -188,8 +190,8 @@ To do (user):
 - [ ] Redirect `svobodaiznutri.ru` → `svobodaiznutri.com` (permanent 301, keeping the path, e.g. registrar URL forwarding).
       All post URLs are unchanged, so old links, search results, `/feed/` subscriptions and the book PDF link in old
       subscriber emails (`/wp-content/uploads/Павел-Долгов.-Как-реализовывать-мечты.pdf`) keep working through it.
-- [ ] New contact email (to be chosen): replace `paveldolgov@svobodaiznutri.ru` in `/new-design-2016/`
-      (`content/blog/2016/2016-03-06-new-design-2016/`) — the only place it appears on the site.
+- [x] New contact email `svobodaiznutri.reliable037@passmail.com` in `/new-design-2016/` (was `paveldolgov@svobodaiznutri.ru`,
+      the only place it appeared on the site). Old theme header comment (with old email and .рф domain) removed from `style.css`.
 - Note: a reader's email (`el.grineva@yandex.ru`) is in one of the comments, as it was on WordPress; remove if preferred.
 - Note: GitHub Pages serves `/feed/` as `text/html` (the content is Atom XML); feed readers handle it.
 
@@ -201,6 +203,8 @@ To do (user):
 - [ ] `postcss.config.js` — postcss is no longer used
 - [ ] `.gitignore`: drop the `_example/` line (folder already removed)
 - [ ] `PLAN.md` — once everything is done (or move the "Decisions" part into README)
+- [ ] `scripts/import_wp_comments.py` (and the `scripts/` folder) — one-off importer; the comment data is already in
+      `content/**/*.11tydata.json`, and the script needs `_sources/` anyway. Remove its mention from README.md too.
 
 ### 16.2 Code leftovers — DONE (2026-10-09)
 - [x] Unused WordPress-era CSS removed (subscription form, related posts, share widget, comment form inputs):
