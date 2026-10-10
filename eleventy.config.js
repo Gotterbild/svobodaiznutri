@@ -26,6 +26,17 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.on("eleventy.after", copyPageAssets);
 	eleventyConfig.addWatchTarget("content/**/*.{jpg,jpeg,png,gif,pdf,doc}");
 
+	// Images that have a full-resolution copy in `images/full/` open it in the lightbox
+	eleventyConfig.addTransform("fullResImages", function(content) {
+		if (!this.page.outputPath || !this.page.outputPath.endsWith(".html")) return content;
+		const fullDir = path.join(path.dirname(this.page.inputPath), "images", "full");
+		if (!fs.existsSync(fullDir)) return content;
+		return content.replace(/<img src="images\/([^"\/]+)"/g, (tag, name) => {
+			if (!fs.existsSync(path.join(fullDir, decodeURIComponent(name)))) return tag;
+			return `${tag} data-full="images/full/${name}"`;
+		});
+	});
+
 	// App plugins
 	eleventyConfig.addPlugin(pluginDrafts);
 

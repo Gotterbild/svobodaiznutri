@@ -371,8 +371,28 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 	.page .blog table th,
 	.page .blog table td { border: 2px solid #98816A; padding: 0.5rem 1rem; }
 	.page .blog table th { border: 2px solid #181310; vertical-align: middle; }
-	.page .blog article .gal a { display: inline-block; margin: 0.5rem; }
-		.page .blog article .gal a img { width:auto; height:133px; }
+	.page .blog article .text p > img {
+		display: block;
+		width: auto;
+		max-height: 80vh;
+		margin: 0 auto;
+	}
+	.page .blog article .gal {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
+		clear: both;
+		margin: 1rem 0;
+	}
+		.page .blog article .gal img {
+			width: auto;
+			height: 133px;
+			cursor: zoom-in;
+			box-shadow: 0 0.25rem 1rem rgba(24, 19, 16, 0.25);
+		}
+		.page .blog article .gal img:hover { box-shadow: 0 0.25rem 2rem rgba(24, 19, 16, 0.5); }
+	.page .blog article .text img.zoomable { cursor: zoom-in; }
 
 #comments #comment-title,
 .comment-respond { margin-bottom: 2rem !important; }
@@ -558,4 +578,58 @@ iframe { max-width: 100% !important; width: 100%; margin-left: auto; margin: 1em
 	padding: 0.75rem 1rem;
 	margin-bottom: 1rem;
 	box-shadow: 0 0.25rem 1rem rgba(24, 19, 16, 0.25);
+}
+
+/* Gallery lightbox ****************************************************************** */
+
+.lightbox-open { overflow: hidden; }
+.lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(24, 19, 16, 0.92);
+	cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+	.lightbox figure { margin: 0; max-width: calc(100vw - 8rem); text-align: center; }
+	.lightbox img {
+		display: block;
+		max-width: 100%;
+		max-height: calc(100vh - 6rem);
+		margin: 0 auto;
+		cursor: default;
+		box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.5);
+	}
+	.lightbox figcaption {
+		color: #fff;
+		font-family: 'Ubuntu Condensed', sans-serif;
+		margin-top: 0.75rem;
+		min-height: 1.5rem;
+	}
+	.lightbox button {
+		position: absolute;
+		background: none;
+		border: none;
+		color: #fff;
+		font-size: 3rem;
+		line-height: 1;
+		padding: 1rem;
+		cursor: pointer;
+		opacity: 0.7;
+	}
+	.lightbox button:hover,
+	.lightbox button:focus { opacity: 1; }
+	.lightbox .lightbox-close { top: 0; right: 0; }
+	.lightbox .lightbox-prev { left: 0; top: 50%; transform: translateY(-50%); }
+	.lightbox .lightbox-next { right: 0; top: 50%; transform: translateY(-50%); }
+	.lightbox.single .lightbox-prev,
+	.lightbox.single .lightbox-next { display: none; }
+
+@media ( max-width: 767px ) {
+	.lightbox figure { max-width: 100vw; }
+	.lightbox .lightbox-prev,
+	.lightbox .lightbox-next { top: auto; bottom: 0; transform: none; }
 }

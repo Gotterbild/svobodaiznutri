@@ -56,7 +56,7 @@ permalink: "/kak-sdelat-chudo-pech-3-praktika/"
 
 Ребята, это всё чушь. Кирпич колется просто, как раз-два-три:
 
-[![](images/molotok-e1428116418145-98x180.jpg)](/wp-content/uploads/molotok-e1428116418145.jpg)
+![](images/molotok-e1428116418145.jpg)
 
 - Берём кирпич,
 - Берём молоток каменшика (картинка слева).

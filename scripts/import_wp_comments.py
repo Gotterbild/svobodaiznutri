@@ -18,6 +18,15 @@ NS = {"wp": "http://wordpress.org/export/1.2/"}
 # Not archived: question about social networks on /fire/ and the answers pointing to the (closed) VK group
 EXCLUDED_COMMENTS = {9443, 9445, 9446}
 
+# Links in comments that no longer work
+LINK_REWRITES = {
+    # "the beginning of the blog" is now the last page of the listing
+    "http://svobodaiznutri.ru/page/14/": "https://svobodaiznutri.ru/page/11/",
+}
+DEAD_LINKS = {
+    "http://kvartira.mirtesen.ru/blog/43373507125/Kak-v-SHveytsarii-200-letniy-saray-prevratili-v-uyutnyiy-3-etazh",
+}
+
 
 def text(el, tag):
     found = el.find(f"wp:{tag}", NS)
@@ -29,6 +38,14 @@ def autop(content):
     content = content.replace("\r\n", "\n").strip()
     paragraphs = [p.strip() for p in re.split(r"\n\s*\n", content) if p.strip()]
     return "\n".join(f"<p>{p.replace(chr(10), '<br />' + chr(10))}</p>" for p in paragraphs)
+
+
+def fix_links(content):
+    for old, new in LINK_REWRITES.items():
+        content = content.replace(old, new)
+    for url in DEAD_LINKS:
+        content = re.sub(rf'<a [^>]*href="{re.escape(url)}"[^>]*>(.*?)</a>', r"\1", content)
+    return content
 
 
 def thread(comments):
@@ -70,7 +87,7 @@ def main():
                 "author": html.unescape(text(c, "comment_author")),
                 "date": text(c, "comment_date"),
                 "isPostAuthor": text(c, "comment_user_id") != "0",
-                "content": autop(text(c, "comment_content")),
+                "content": fix_links(autop(text(c, "comment_content"))),
             })
         if not comments or md is None:
             continue

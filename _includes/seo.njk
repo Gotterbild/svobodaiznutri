@@ -3,7 +3,7 @@
 {%- set seoKeywords = keywords or metadata.keywords %}
 <meta name="description" content="{{ seoDescription }}">
 <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
-<link rel="alternate" href="/feed/" type="application/rss+xml" title="{{ metadata.title }}">
+<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
 <meta property="og:site_name" content="{{ metadata.title }}">
 <meta property="og:type" content="{{ 'article' if layout == 'layouts/post.njk' else 'website' }}">

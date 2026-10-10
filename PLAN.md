@@ -40,36 +40,33 @@
 - [x] Verified: built post URLs == WP published post URLs (minus dropped `podderzhat-svobodu-iznutri`).
 
 ### Found during 1–4, to handle later
-- ~250 links to `/wp-content/uploads/...` (mostly full-size image links around inline images, a few `<img src>`) — section 10.
+- GitHub workflow fixed: Node from `.nvmrc` (20), actions v4, `npm ci`, deploy `_site` to `gh-pages` on push to master.
 - `/feed/` linked in `<head>` but not built yet — section 12.
-- Missing image files referenced by posts (thumbnail sizes like `-300x225.jpg` never exported):
-  `pro-jizn-na-dereve` (14), `oshibki-nachinayuschih-ekostroitelei-1` (4), `idealniy-razmer-doma` (1),
-  `pochemu-ya-pereehal-iz-goroda-na-zemlu` (1) — look in `_sources/html/wp-content/` (section 10).
-- Broken external link `detail.tmall.com/...` without `https://` in `elektrifikaciya-ekodoma`.
 
-## 5. Single Article Page
+
+## 5. Single Article Page — DONE (verified by user, 2026-10-09)
 
 ### 5.1 Verify post rendering
-- [ ] Test that post content renders correctly
-- [ ] Verify thumbnail displays
-- [ ] Verify metadata (date, categories, tags) displays
-- [ ] Test that images in content display correctly
-- [ ] Verify READMORE is not shown on single post page
+- [x] Test that post content renders correctly
+- [x] Verify thumbnail displays
+- [x] Verify metadata (date, categories, tags) displays
+- [x] Test that images in content display correctly
+- [x] Verify READMORE is not shown on single post page
 
 ### 5.2 Test navigation
-- [ ] Verify previous/next post links work
-- [ ] Test that permalink URLs are correct
-- [ ] Test internal links between posts work
+- [x] Verify previous/next post links work
+- [x] Test that permalink URLs are correct
+- [x] Test internal links between posts work
 
 ### 5.3 Verify sidebar
-- [ ] Test that sidebar renders
-- [ ] Test sidebar links work
+- [x] Test that sidebar renders
+- [x] Test sidebar links work
 
 ### 5.4 Popular posts in sidebar
-- [ ] Identify or create list of popular posts in `_data/`
-- [ ] Add popular posts section to sidebar
-- [ ] Display post titles with links
-- [ ] Style according to existing design
+- [x] Identify or create list of popular posts in `_data/`
+- [x] Add popular posts section to sidebar
+- [x] Display post titles with links
+- [x] Style according to existing design
 
 ## 6. Comments — DONE (2026-10-09)
 
@@ -80,17 +77,15 @@
 - [x] Verified: comment ids and order identical to the WP HTML snapshot on all 73 snapshot posts.
 - [x] Footer VK link removed (user request).
 
-## 7. Book Page
+## 7. Book Page — DONE (2026-10-09)
 
-### 7.1 Create book page
-- [ ] Copy content from `_sources/md/pages/2014-09-16-kniga-kak-realizovyvat-mechty/index.md`
-- [ ] Create `content/kniga-kak-realizovyvat-mechty/index.md` or appropriate path
-- [ ] Set frontmatter with permalink from original
-- [ ] Use appropriate layout (base or post)
-- [ ] Copy any images to page folder
-- [ ] Update image paths
-- [ ] Test that page renders correctly
-- [ ] Verify permalink works
+- [x] `/kniga-kak-realizovyvat-mechty/` (`content/pages/2014-09-16-kniga-kak-realizovyvat-mechty/`): text + cover,
+      subscription form replaced by a direct PDF download.
+- [x] PDF downloaded from the live site (it was a WP attachment, not in the exports):
+      `Павел-Долгов.-Как-реализовывать-мечты.pdf` (42 pages). Also kept at its old URL
+      `/wp-content/uploads/Павел-Долгов.-Как-реализовывать-мечты.pdf` (links in old subscriber emails).
+- [x] Post `/kak-realizovyvat-mechty-kniga/`: subscription sections ("Улучшаем жизнь!", "Но и это ещё не всё!") + form
+      replaced by the download link. `/sohataya-chudo-pech/`: subscribe paragraph + form removed.
 
 ## 8–9. Categories and tags — DONE (2026-10-09)
 
@@ -105,32 +100,40 @@
 - [x] All mentions of VK groups removed: footer link, VK bullet in `/new-design-2016/`,
       music group line in `/zdravstvuite-dorogie-chitateli/`, comments 9443/9445/9446 on `/fire/` (see `EXCLUDED_COMMENTS`).
       Kept: links to third-party VK pages (`/kupolny-dom-…/`, `/planirovka-3-nash-metod/` + one comment there),
-      and "вКонтакте" mentions in `/pochemu-ya-pereehal-iz-goroda-na-zemlu/` (author's wall/feed, not a group). Email kept.
+      Email kept. Personal VK (account deleted) removed too: "вКонтакте" dropped from 3 sentences
+      (`/pochemu-ya-pereehal-iz-goroda-na-zemlu/` ×2, `/zdravstvuite-dorogie-chitateli/`).
 
-## 10. Full Posts Migration
+## 10. Images — DONE (2026-10-09)
 
-### 10.1 Migrate all remaining posts
-- [ ] For each post in `_sources/md/posts/`:
-  - [ ] Create folder structure in `content/blog/YYYY/YYYY-MM-DD-slug/`
-  - [ ] Copy/create markdown file as `YYYY-MM-DD-slug.md`
-  - [ ] Copy frontmatter (title, date, categories, tags, coverImage)
-  - [ ] Ensure permalink is set correctly
-  - [ ] Copy content with READMORE tag
-  - [ ] Update internal links if needed
+- [x] 17 missing WP thumbnails (`-300x225` etc., 404 on the live site too) regenerated from originals in `_sources/html/wp-content/`;
+      3 images referenced via `/wp-content/uploads/2013/12/` copied into their posts.
+- [x] Links around images removed (they led to `/wp-content/...` → 404), incl. 6 links to blogspot copies.
+- [x] Photo galleries restored from the WP export: 14 galleries / 48 photos in 9 posts, as `<div class="gal">` thumbnails
+      with `data-full` full-size copies; built-in lightbox in `public/js/script.js` (prev/next, Esc, arrows, caption).
+- [x] PDFs linked from posts copied next to the posts (`pochemu-ya-pereehal-…`, `vybor-uchastka-…`); drawing link in
+      `chertyozh-pechi-…` points to a local copy; broken tmall link got `https://` (was broken on WP too).
+- [x] 2 unrecoverable images removed (user decision): table in `/idealniy-razmer-doma/`, picture in
+      `/pochemu-ya-pereehal-iz-goroda-na-zemlu/` (surrounding text still refers to them).
+- [x] 41 small in-post thumbnails (≤320px, were click-to-enlarge on WP) replaced with originals scaled to max 960px wide,
+      in 9 posts; in-post images capped at 80vh height and centred.
+- [x] Click-to-enlarge for single images: full-resolution originals for 30 images in `images/full/`
+      (`fullResImages` transform adds `data-full`); any image shown scaled down also opens in the lightbox.
+- [x] 6 images that never rendered (straight quotes inside captions) fixed: quotes → «».
+- [x] Sentences referring to the 2 removed images reworded.
 
-### 10.2 Migrate all images
-- [ ] For each post, identify images from HTML export or existing `src/posts/`
-- [ ] Copy images to post folder root
-- [ ] Update image references in markdown to remove `images/` path
-- [ ] Create list of missing images
+## 10a. Text and link fixes (2026-10-09)
 
-### 10.3 Verify all images exist
-- [ ] Create script to check all image references in markdown
-- [ ] Compare with files on disk
-- [ ] Generate report of missing images
-- [ ] Locate missing images in `_sources/html/` or `_sources/theme/`
-- [ ] Copy missing images to appropriate post folders
-- [ ] Re-run verification until all images found
+- [x] Broken italics: quote in `/glina-i-glinobeton/` de-italicised, `Плюсы_:_` in `/likbez-po-tehnologiam-ekostroitelstva/`.
+- [x] "Поделиться статьёй … кнопочки ниже" removed (`/glina-i-glinobeton/`; share buttons don't exist anymore).
+- [x] Dead Google Sites "(читать онлайн, скачать)" links removed, book titles kept
+      (`/glina-i-glinobeton/`, `/kak-sdelat-chudo-pech-1-podgotovka/`, `/iz-chego-stroit-steny-ekodoma/`).
+- [x] All 62 external links checked. Dead ones unlinked or the sentence trimmed: bibl.at.ua, dokumentika.org,
+      mirodolie.ru (×2), sandbaghouse.com, ecology.md, stroiteli.info, goandsee.ru, maps.rosreestr.ru,
+      7 unavailable YouTube videos; in comments (via `scripts/import_wp_comments.py`): mirtesen link unlinked,
+      `/page/14/` → `/page/11/`.
+- [ ] Kept, uncertain: mirtv.ru (403 to bots), ozzyzello.livejournal.com (redirects to login).
+- [ ] 4 embedded YouTube videos are now PRIVATE (show "Video unavailable"): `/stroim-iz-meshkov-video/`,
+      `/tyaga-nashey-pechki/`, `/gorodskie-istorii-tri-holma/`, `/gorodskie-istorii-odin-den-v-rostovgrade/` — decision pending.
 
 ## 11. URL Verification
 
@@ -158,41 +161,20 @@
 - [ ] Update any broken internal links
 - [ ] Test navigation between posts
 
-## 12. RSS Feed
+## 12. RSS Feed — DONE (2026-10-09)
 
-### 12.1 Install RSS plugin
-- [ ] Add `@11ty/eleventy-plugin-rss` to dependencies
-- [ ] Configure plugin in `eleventy.config.js`
-
-### 12.2 Create RSS feed template
-- [ ] Create `content/feed/feed.xml.njk`
-- [ ] Include all posts in feed
-- [ ] Set correct metadata (title, description, URL)
-- [ ] Add post content to feed items
-- [ ] Set permalink to `/feed.xml` or existing feed URL
-
-### 12.3 Create JSON feed
-- [ ] Create `content/feed/feed.json.njk`
-- [ ] Use same structure as XML feed
-- [ ] Set permalink appropriately
-
-### 12.4 Add feed links to layout
-- [ ] Add RSS feed link to `_includes/layouts/base.njk` head
-- [ ] Add feed links to footer or appropriate location
+- [x] Atom feed (as PDP) with all 77 posts, full content, absolute URLs: `/feed/feed.xml`,
+      same feed also at `/feed/index.html` so the old WordPress URL `/feed/` keeps working on GitHub Pages.
+- [x] `<link rel="alternate">` in `<head>`. No JSON feed (not needed for an archive).
 
 ## 13. Additional Features
 
-### 13.1 Create 404 page
-- [ ] Create `content/404.md`
-- [ ] Use appropriate layout
-- [ ] Add helpful navigation links
-- [ ] Configure server to use 404.html
+### 13.1 Create 404 page — DONE
+- [x] `content/404.md` (GitHub Pages serves `/404.html` automatically)
 
-### 13.2 Add sitemap
-- [ ] Create sitemap template or use plugin
-- [ ] Include all posts and pages
-- [ ] Exclude drafts and pagination pages
-- [ ] Set permalink to `/sitemap.xml`
+### 13.2 Add sitemap — DONE (2026-10-09)
+- [x] `/sitemap.xml`: home + all posts (+ pages once added); no drafts, listing or category/tag pages
+- [x] `Sitemap:` line in `robots.txt`
 
 ### 13.3 Verify archive notice
 - [ ] Check that archive notice appears after header on all pages
@@ -264,33 +246,26 @@
 - [ ] Enable HTTPS in GitHub Pages settings
 - [ ] Test all URLs work with custom domain
 
-## 16. Cleanup
+## 16. Cleanup — POSTPONED (do after the site is live and verified)
 
-### 16.1 Backup verification
-- [ ] Ensure all original content is backed up
-- [ ] Verify nothing is lost
-- [ ] Keep `_sources/` and `_example/` folders until final confirmation
+### 16.1 Remove from the repo
+- [ ] `src/` — old 2021 Eleventy 0.12 site; all content is migrated to `content/` (posts, images; pages still pending: book)
+- [ ] `.eleventy.js` — old config; then drop `--config=eleventy.config.js` from npm scripts
+- [ ] `postcss.config.js` — postcss is no longer used
+- [ ] `.gitignore`: drop the `_example/` line (folder already removed)
+- [ ] `PLAN.md` — once everything is done (or move the "Decisions" part into README)
 
-### 16.2 Remove old files (only after everything confirmed working)
-- [ ] Remove `src/` directory
-- [ ] Remove old `.eleventy.js`
-- [ ] Remove `postcss.config.js`
-- [ ] Remove old `package-lock.json` (will be regenerated)
-- [ ] Remove any other obsolete files
+### 16.2 Code leftovers
+- [ ] `public/style.css`, `public/media.css`: unused WordPress-era rules (`.widget_wysija*` subscription form,
+      `.related_posts_by_taxonomy`, `.comment-respond` form inputs, `.top-widget`)
+- [ ] `public/js/script.js`: commented-out jQuery code (SVG inlining, fancybox, wysija)
+- [ ] `_includes/widget-popular-posts.njk` uses old WP plugin class names — fine to keep, just noting
 
-### 16.3 Documentation
-- [ ] Update README.md with new structure
-- [ ] Document build process
-- [ ] Document deployment process
-- [ ] Add notes about archived status
-- [ ] Document where to find original content (`_sources/`)
+### 16.3 Outside the repo / not committed
+- [ ] `../svobodaiznutri.ru_2/` (wp_to_md_converter + temp) — the export is done, the result is in `_sources/md`
+- [ ] `_sources/подписчики.csv` — newsletter subscribers' emails (personal data); delete unless you need it
+- [ ] `_sources/comments.xml` — subset of `c.WordPress.2021-05-30.xml`, not used by any script
+- Keep: `_sources/c.WordPress.2021-05-30.xml` and `_sources/html/` (used by `scripts/import_wp_comments.py` and as image source)
 
-### 16.4 Final verification
-- [ ] Full site build test
-- [ ] Check all URLs work
-- [ ] Verify all images load
-- [ ] Test all navigation
-- [ ] Verify RSS feeds work
-- [ ] Check GitHub Pages deployment
-- [ ] Test custom domain
-- [ ] Get final approval before removing old structure
+### 16.4 Documentation
+- [ ] Rewrite README.md (current one is the 2021 TODO list): structure, `npm start` / `npm run build`, deploy, archive status

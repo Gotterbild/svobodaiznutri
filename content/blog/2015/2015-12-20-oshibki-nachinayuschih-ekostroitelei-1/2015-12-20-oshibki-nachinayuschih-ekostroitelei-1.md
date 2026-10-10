@@ -99,6 +99,11 @@ permalink: "/oshibki-nachinayuschih-ekostroitelei-1/"
 
 Напоследок несколько идей простеньких бытовок и обещанное видео про домик Адвоката Егорова.
 
-[![tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka](images/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka-156x150.jpg)](/wp-content/uploads/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka.jpg)[![37](images/37-200x129.jpg)](/wp-content/uploads/37.jpg)[![28](images/28-200x113.jpg)](/wp-content/uploads/28.jpg)[![0_hozblok-1](images/0_hozblok-1-200x150.jpg)](/wp-content/uploads/0_hozblok-1.jpg)
+<div class="gal">
+<img src="images/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka-156x150.jpg" data-full="images/tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka.jpg" alt="tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka" title="tipovoy-chertezh-dachnogo-tualeta-i-dusha-dlya-dachnogo-uchastka" loading="lazy">
+<img src="images/37-200x129.jpg" data-full="images/37.jpg" alt="37" title="37" loading="lazy">
+<img src="images/28-200x113.jpg" data-full="images/28.jpg" alt="28" title="28" loading="lazy">
+<img src="images/0_hozblok-1-200x150.jpg" data-full="images/0_hozblok-1.jpg" alt="0_hozblok-1" title="0_hozblok-1" loading="lazy">
+</div>
 
 <iframe src="https://www.youtube.com/embed/D2a6mqYubZ4" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
