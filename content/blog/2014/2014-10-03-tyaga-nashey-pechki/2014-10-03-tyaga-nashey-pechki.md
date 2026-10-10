@@ -12,6 +12,8 @@ tags:
 coverImage: false
 noReadModeButton: true
 permalink: "/tyaga-nashey-pechki/"
+# Hidden: the embedded YouTube video became private
+draft: true
 ---
 
 Осень настала внезапно, а ведь ещё необходимо завершить массу приготовлений к зиме, так что времени написать развёрнутую статью всё никак не подвернётся. Но я обещал подробнее рассказать про нашу печку, а обещания нужно исполнять.

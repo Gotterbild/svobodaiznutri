@@ -9,6 +9,8 @@ tags:
 coverImage: false
 noReadModeButton: true
 permalink: "/stroim-iz-meshkov-video/"
+# Hidden: the embedded YouTube video became private
+draft: true
 ---
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/iaFg_7qYzzI" frameborder="0" allowfullscreen></iframe>

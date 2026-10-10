@@ -10,6 +10,8 @@ tags:
 coverImage: false
 noReadModeButton: true
 permalink: "/gorodskie-istorii-tri-holma/"
+# Hidden: the embedded YouTube video became private
+draft: true
 ---
 
 На нашем местном телевидении вышла передача про нас с Катей и про наш "коттедж" из мешков. Огромное спасибо её авторам: Анне Пробенко и Илье Тяну.

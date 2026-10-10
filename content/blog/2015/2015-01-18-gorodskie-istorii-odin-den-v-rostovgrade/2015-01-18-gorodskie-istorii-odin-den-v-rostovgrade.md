@@ -10,6 +10,8 @@ tags:
 coverImage: false
 noReadModeButton: true
 permalink: "/gorodskie-istorii-odin-den-v-rostovgrade/"
+# Hidden: the embedded YouTube video became private
+draft: true
 ---
 
 Я уже неоднократно упоминал про наших соседей — Ваню и Илону. Пришло время познакомиться с ними поближе. С их великодушного разрешения.

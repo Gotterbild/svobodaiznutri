@@ -17,6 +17,7 @@
   (PDF to be provided by the user). Same PDF link replaces the form in post `/kak-realizovyvat-mechty-kniga/`.
   Drop: otpiska, vy-podtverdili-podpisku, kontakty, home, o-nas, podderzhka, spasibo.
 - Drop post `podderzhat-svobodu-iznutri` (donations) → 77 published posts = 11 pages × 7.
+- Hide 4 posts whose only content was a now-private YouTube video → 73 published posts, still 11 pages.
 - Remove subscribe calls-to-action sentences from post text (e.g. sohataya-chudo-pech, kak-realizovyvat-mechty-kniga).
 - Third-party: keep Yandex.Metrika counter (remove footer informer badge), keep YouTube embeds,
   remove VK group widget and the footer VK link.
@@ -132,8 +133,10 @@
       7 unavailable YouTube videos; in comments (via `scripts/import_wp_comments.py`): mirtesen link unlinked,
       `/page/14/` → `/page/11/`.
 - [ ] Kept, uncertain: mirtv.ru (403 to bots), ozzyzello.livejournal.com (redirects to login).
-- [ ] 4 embedded YouTube videos are now PRIVATE (show "Video unavailable"): `/stroim-iz-meshkov-video/`,
-      `/tyaga-nashey-pechki/`, `/gorodskie-istorii-tri-holma/`, `/gorodskie-istorii-odin-den-v-rostovgrade/` — decision pending.
+- [x] 4 posts whose embedded YouTube video became private are hidden (`draft: true`, user decision):
+      `/stroim-iz-meshkov-video/`, `/tyaga-nashey-pechki/`, `/gorodskie-istorii-tri-holma/`,
+      `/gorodskie-istorii-odin-den-v-rostovgrade/`. No other page links to them. Site: 73 posts, 11 pages.
+- mirtv.ru: not the only content of any article (`/kosmicheskie-korabli-…/`, `/zachem-ya-zakruglil-svoy-dom/` addendum) — kept.
 
 ## 11. URL Verification
 
